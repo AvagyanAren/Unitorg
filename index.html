@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яниторг group - Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="logo-img">
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="#hero" class="nav-link active" data-section="hero">Главная</a>
+                    <a href="#about-company" class="nav-link" data-section="about-company">О компании</a>
+                    <a href="#product-groups" class="nav-link" data-section="product-groups">Продукция</a>
+                    <a href="#testimonials" class legit data-section="testimonials">Отзывы</a>
+                    <a href="#contacts" class="nav-link" data-section="contacts">Контакты</a>
+                </nav>
+
+                <!-- Contact Container -->
+                <div class="contact-container">
+                    <a href="tel:" class="contact-icon contact-phone">
+                        <img src="SVG%20icons/solar_phone-bold.svg" alt="Phone" class="contact-svg">
+                    </a>
+                    <div class="contact-separator"></div>
+                    <a href="#" class="contact-icon contact-telegram">
+                        <img src="SVG%20icons/Telegram%20Logo.svg" alt="Telegram" class="contact-svg">
+                    </a>
+                    <a href="#" class="contact-icon contact-whatsapp">
+                        <img src="SVG%20icons/Whatsapp%20logo.svg" alt="WhatsApp" class="contact-svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left Side - Text Content -->
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line-1">Гармони<span class="letter-y">я</span> вкусов</span>
+                        <span class="title-line-2">для яркого дня!</span>
+                    </h1>
+                    <p class="hero-description">
+                        Поставляем продукцию ведущих производителей замороженных и охлаждённых товаров.
+                    </p>
+                    <button class="download-btn">
+                        <img src="SVG%20icons/Download%20SVG%20icon.svg" alt="Download" class="download-icon">
+                        <span>Скачать каталог</span>
+                    </button>
+                </div>
+
+                <!-- Right Side - Product Images -->
+                <div class="hero-products">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company Section -->
+    <section id="about-company" class="about-company">
+        <div class="container">
+            <!-- Header Container (Title + Subtitle) -->
+            <div class="about-company-header">
+                <h2 class="about-company-title">О компании</h2>
+                <p class="about-company-subtitle">
+                    Надёжный поставщик, которому доверяют ведущие компании по всей стране.
+                </p>
+            </div>
+
+            <!-- Content Container (Picture + Text + Cards) -->
+            <div class="about-company-content">
+                <!-- Left Side - Photo -->
+                <div class="about-company-photo">
+                    <img src="Images/About the company.png" alt="О компании" class="about-company-image">
+                </div>
+
+                <!-- Right Side - Text Content -->
+                <div class="about-company-text">
+                    <div class="about-company-description">
+                        <p>
+                            Компания основана в 2014 году и за время работы зарекомендовала себя как надёжный поставщик замороженной и охлаждённой продукции по всей России. Мы начинали с локальных поставок, а сегодня сотрудничаем с десятками производителей и дистрибьюторов, обеспечивая стабильное качество и своевременную доставку.
+                        </p>
+                        <p>
+                            Наши клиенты — розничные сети, дистрибьюторы и предприятия HoReCa. Мы предлагаем индивидуальные условия, гибкие формы сотрудничества и тщательно контролируем качество на каждом этапе — от закупки и хранения до транспортировки.
+                        </p>
+                        <p>
+                            Главные принципы нашей работы — честность, ответственность и долгосрочные партнёрские отношения. Мы уверены, что доверие и стабильность — основа успешного сотрудничества.
+                        </p>
+                        <p>
+                            Наша цель — сделать процесс закупок простым, прозрачным и надёжным, помогая партнёрам развивать бизнес и уверенно двигаться вперёд.
+                        </p>
+                    </div>
+
+                    <!-- Statistics Cards -->
+                    <div class="about-company-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-icon">
+                                    <path d="M23.9999 28.6667C28.5102 28.6667 32.1666 25.0104 32.1666 20.5C32.1666 15.9897 28.5102 12.3334 23.9999 12.3334C19.4896 12.3334 15.8333 15.9897 15.8333 20.5C15.8333 25.0104 19.4896 28.6667 23.9999 28.6667Z" stroke="#208AF4" stroke-width="1.5"/>
+                                    <path d="M18.576 27.5L17.8328 30.2102C17.1002 32.8842 16.7338 34.2212 17.2227 34.9527C17.3942 35.2093 17.624 35.4147 17.8912 35.5512C18.6518 35.9385 19.8278 35.326 22.1787 34.101C22.9603 33.6927 23.3523 33.4897 23.7677 33.4453C23.9221 33.4299 24.0776 33.4299 24.232 33.4453C24.6473 33.4897 25.0382 33.6938 25.821 34.101C28.1718 35.326 29.3478 35.9385 30.1085 35.5512C30.3757 35.4147 30.6055 35.2093 30.777 34.9527C31.267 34.2212 30.8995 32.8842 30.1668 30.2102L29.4237 27.5" stroke="#208AF4" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">лет опыта</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-icon">
+                                    <path d="M26.5 24.3125C25.5729 24.3125 24.6666 24.0376 23.8958 23.5225C23.1249 23.0074 22.5241 22.2754 22.1693 21.4188C21.8145 20.5623 21.7217 19.6198 21.9026 18.7105C22.0834 17.8012 22.5299 16.966 23.1854 16.3104C23.841 15.6549 24.6762 15.2084 25.5855 15.0276C26.4948 14.8467 27.4373 14.9395 28.2938 15.2943C29.1504 15.6491 29.8824 16.2499 30.3975 17.0208C30.9126 17.7916 31.1875 18.6979 31.1875 19.625C31.1875 20.8682 30.6936 22.0605 29.8146 22.9396C28.9355 23.8186 27.7432 24.3125 26.5 24.3125ZM26.5 16.8125C25.9437 16.8125 25.4 16.9775 24.9375 17.2865C24.4749 17.5955 24.1145 18.0348 23.9016 18.5487C23.6887 19.0626 23.633 19.6281 23.7415 20.1737C23.8501 20.7193 24.1179 21.2204 24.5113 21.6137C24.9046 22.0071 25.4057 22.2749 25.9513 22.3835C26.4969 22.492 27.0624 22.4363 27.5763 22.2234C28.0902 22.0105 28.5295 21.6501 28.8385 21.1875C29.1476 20.725 29.3125 20.1813 29.3125 19.625C29.3125 18.8791 29.0162 18.1637 28.4887 17.6363C27.9613 17.1088 27.2459 16.8125 26.5 16.8125ZM35.25 33.0625C35.0024 33.0593 34.7658 32.9595 34.5907 32.7843C34.4155 32.6092 34.3157 32.3726 34.3125 32.125C34.3125 29.6875 32.9875 28.0625 26.5 28.0625C20.0125 28.0625 18.6875 29.6875 18.6875 32.125C18.6875 32.3736 18.5887 32.6121 18.4129 32.7879C18.2371 32.9637 17.9986 33.0625 17.75 33.0625C17.5014 33.0625 17.2629 32.9637 17.0871 32.7879C16.9113 32.6121 16.8125 32.3736 16.8125 32.125C16.8125 26.1875 23.6 26.1875 26.5 26.1875C29.4 26.1875 36.1875 26.1875 36.1875 32.125C36.1843 32.3726 36.0845 32.6092 35.9093 32.7843C35.7342 32.9595 35.4976 33.0593 35.25 33.0625ZM19.4 25.325H19C18.0054 25.2289 17.0898 24.7416 16.4545 23.9703C15.8192 23.1991 15.5164 22.2071 15.6125 21.2125C15.7086 20.2179 16.1959 19.3023 16.9672 18.667C17.7384 18.0317 18.7304 17.7289 19.725 17.825C19.8525 17.8305 19.9776 17.8619 20.0925 17.9175C20.2075 17.973 20.3098 18.0514 20.3934 18.1479C20.477 18.2444 20.54 18.3569 20.5785 18.4786C20.617 18.6003 20.6303 18.7285 20.6175 18.8555C20.6047 18.9825 20.5662 19.1056 20.5041 19.2172C20.4421 19.3287 20.358 19.4264 20.2569 19.5043C20.1557 19.5822 20.0398 19.6387 19.9161 19.6701C19.7924 19.7016 19.6636 19.7075 19.5375 19.6875C19.2935 19.6632 19.0471 19.6883 18.813 19.7613C18.5789 19.8343 18.3619 19.9538 18.175 20.1125C17.9852 20.2656 17.8277 20.455 17.7118 20.6696C17.5959 20.8842 17.5239 21.1198 17.5 21.3625C17.4742 21.6083 17.4975 21.8567 17.5686 22.0934C17.6397 22.3301 17.7573 22.5502 17.9143 22.741C18.0714 22.9318 18.2648 23.0894 18.4834 23.2047C18.702 23.32 18.9413 23.3906 19.1875 23.4125C19.5944 23.4473 20.0018 23.3509 20.35 23.1375C20.5622 23.0066 20.8177 22.9652 21.0603 23.0227C21.3029 23.0801 21.5128 23.2316 21.6437 23.4438C21.7747 23.6559 21.816 23.9114 21.7586 24.1541C21.7011 24.3967 21.5497 24.6066 21.3375 24.7375C20.7577 25.1073 20.0875 25.3105 19.4 25.325ZM12.75 32.125C12.5024 32.1218 12.2658 32.022 12.0907 31.8468C11.9155 31.6717 11.8157 31.4351 11.8125 31.1875C11.8125 27.8125 12.7125 25.5625 17.125 25.5625C17.3736 25.5625 17.6121 25.6613 17.7879 25.8371C17.9637 26.0129 18.0625 26.2514 18.0625 26.5C18.0625 26.7486 17.9637 26.9871 17.7879 27.1629C17.6121 27.3387 17.3736 27.4375 17.125 27.4375C14.1875 27.4375 13.6875 28.375 13.6875 31.1875C13.6843 31.4351 13.5845 31.6717 13.4093 31.8468C13.2342 32.022 12.9976 32.1218 12.75 32.125Z" fill="#208AF4"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Клиентов</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-icon">
+                                    <path d="M31.875 21.375C31.875 19.2864 31.0453 17.2834 29.5685 15.8065C28.0916 14.3297 26.0886 13.5 24 13.5C21.9114 13.5 19.9084 14.3297 18.4315 15.8065C16.9547 17.2834 16.125 19.2864 16.125 21.375C16.125 24.6055 18.7098 28.816 24 33.8595C29.2902 28.816 31.875 24.6055 31.875 21.375ZM24 36.25C17.5827 30.4172 14.375 25.4578 14.375 21.375C14.375 18.8223 15.3891 16.3741 17.1941 14.5691C18.9991 12.7641 21.4473 11.75 24 11.75C26.5527 11.75 29.0009 12.7641 30.8059 14.5691C32.6109 16.3741 33.625 18.8223 33.625 21.375C33.625 25.4578 30.4172 30.4172 24 36.25Z" fill="#208AF4"/>
+                                    <path d="M24 24C24.6962 24 25.3639 23.7234 25.8562 23.2312C26.3484 22.7389 26.625 22.0712 26.625 21.375C26.625 20.6788 26.3484 20.0111 25.8562 19.5188C25.3639 19.0266 24.6962 18.75 24 18.75C23.3038 18.75 22.6361 19.0266 22.1438 19.5188C21.6516 20.0111 21.375 20.6788 21.375 21.375C21.375 22.0712 21.6516 22.7389 22.1438 23.2312C22.6361 23.7234 23.3038 24 24 24ZM24 25.75C22.8397 25.75 21.7269 25.2891 20.9064 24.4686C20.0859 23.6481 19.625 22.5353 19.625 21.375C19.625 20.2147 20.0859 19.1019 20.9064 18.2814C21.7269 17.4609 22.8397 17 24 17C25.1603 17 26.2731 17.4609 27.0936 18.2814C27.9141 19.1019 28.375 20.2147 28.375 21.375C28.375 22.5353 27.9141 23.6481 27.0936 24.4686C26.2731 25.2891 25.1603 25.75 24 25.75Z" fill="#208AF4"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Регионов</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-icon">
+                                    <path d="M34.5 28.6687V19.3303C34.4996 19.0246 34.4192 18.7244 34.2667 18.4595C34.1143 18.1946 33.8951 17.9742 33.631 17.8204L25.3185 12.9827C24.918 12.7495 24.4629 12.6267 23.9995 12.6267C23.536 12.6267 23.0809 12.7495 22.6804 12.9827L14.369 17.8204C14.1049 17.9742 13.8857 18.1946 13.7333 18.4595C13.5808 18.7244 13.5004 19.0246 13.5 19.3303V28.6687C13.5002 28.9746 13.5805 29.275 13.733 29.5401C13.8854 29.8052 14.1047 30.0258 14.369 30.1797L22.6815 35.0174C23.0821 35.2502 23.5372 35.3729 24.0005 35.3729C24.4639 35.3729 24.919 35.2502 25.3196 35.0174L33.6321 30.1797C33.8962 30.0256 34.1152 29.805 34.2675 29.5399C34.4198 29.2748 34.4999 28.9745 34.5 28.6687Z" stroke="#208AF4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.7734 18.4214L24 24.437M24 24.437L34.2266 18.4214M24 24.437V35.3745" stroke="#208AF4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">Тонн в год</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="how-it-works-inner">
+                <div class="how-it-works-header">
+                    <h2 class="how-it-works-title">Начать с нами — проще, чем кажется</h2>
+                    <p class="how-it-works-subtitle">
+                        Мы ценим ваше время. Всего несколько шагов — и вы получаете стабильного поставщика с гибкими условиями, быстрой доставкой и персональным менеджером.
+                    </p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="step-icon">
+                                <path d="M56.4167 31.6666V37.1666M39.9167 31.6666V37.1666M48.1667 31.6666V37.1666M62.8333 51.8333V47.25C62.8333 41.2 62.8333 38.175 60.9542 36.2958C59.075 34.4166 56.05 34.4166 50 34.4166H46.3333C40.2833 34.4166 37.2583 34.4166 35.3792 36.2958C33.5 38.175 33.5 41.2 33.5 47.25V55.5C33.5 61.55 33.5 64.575 35.3792 66.4541C37.2583 68.3333 40.2833 68.3333 46.3333 68.3333H51.8333M40.8333 55.5H48.1667M40.8333 48.1666H55.5M66.5 62.8333H61M61 62.8333H55.5M61 62.8333V68.3333M61 62.8333V57.3333" stroke="#208AF4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Заявка</h3>
+                            <p class="step-description">
+                                Оставьте заявку на сайте или свяжитесь с нами по телефону. Укажите формат торговой точки и контактные данные.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="step-icon">
+                                <path d="M50.8745 50.8718C53.1956 48.551 56.3436 47.2473 59.626 47.2476C62.9083 47.2478 66.0561 48.552 68.3769 50.8731C70.6977 53.1943 72.0013 56.3423 72.001 59.6246C72.0008 62.9069 70.6966 66.0547 68.3755 68.3755C68.1162 68.626 67.7688 68.7646 67.4083 68.7614C67.0478 68.7583 66.7029 68.6137 66.448 68.3587C66.1931 68.1038 66.0485 67.7589 66.0453 67.3984C66.0422 67.0379 66.1808 66.6906 66.4313 66.4313C67.7772 65.0851 68.6938 63.3701 69.0651 61.5031C69.4364 59.636 69.2458 57.7008 68.5172 55.9421C67.7887 54.1835 66.5551 52.6803 64.9723 51.6227C63.3895 50.5652 61.5286 50.0007 59.625 50.0007C57.7214 50.0007 55.8605 50.5652 54.2777 51.6227C52.6949 52.6803 51.4613 54.1835 50.7328 55.9421C50.0042 57.7008 49.8136 59.636 50.1849 61.5031C50.5562 63.3701 51.4728 65.0851 52.8187 66.4313C53.0692 66.6906 53.2078 67.0379 53.2047 67.3984C53.2015 67.7589 53.0569 68.1038 52.802 68.3587C52.5471 68.6137 52.2022 68.7583 51.8417 68.7614C51.4812 68.7646 51.1338 68.626 50.8745 68.3755C49.7249 67.2263 48.813 65.8619 48.1909 64.3603C47.5687 62.8586 47.2485 61.2491 47.2485 59.6236C47.2485 57.9982 47.5687 56.3887 48.1909 54.887C48.813 53.3853 49.7249 52.0209 50.8745 50.8718ZM54.7603 54.7603C56.0501 53.4704 57.7995 52.7458 59.6236 52.7458C61.4477 52.7458 63.1972 53.4704 64.487 54.7603C65.7768 56.0501 66.5015 57.7995 66.5015 59.6236C66.5015 61.4477 65.7768 63.1972 64.487 64.487C64.2288 64.7452 63.8786 64.8902 63.5135 64.8902C63.1484 64.8902 62.7982 64.7452 62.54 64.487C62.2818 64.2288 62.1368 63.8786 62.1368 63.5135C62.1368 63.1484 62.2818 62.7982 62.54 62.54C63.1174 61.9633 63.5108 61.2283 63.6704 60.428C63.8299 59.6277 63.7486 58.798 63.4365 58.044C63.1244 57.2899 62.5957 56.6454 61.9173 56.1919C61.2388 55.7384 60.4411 55.4964 59.625 55.4964C58.8089 55.4964 58.0112 55.7384 57.3327 56.1919C56.6543 56.6454 56.1256 57.2899 55.8135 58.044C55.5014 58.798 55.4201 59.6277 55.5796 60.428C55.7392 61.2283 56.1326 61.9633 56.71 62.54C56.9682 62.7986 57.1131 63.1491 57.1128 63.5145C57.1126 63.8799 56.9672 64.2302 56.7086 64.4884C56.4501 64.7466 56.0995 64.8915 55.7342 64.8912C55.3688 64.8909 55.0184 64.7456 54.7603 64.487C54.1212 63.8485 53.6143 63.0904 53.2685 62.2559C52.9226 61.4214 52.7446 60.5269 52.7446 59.6236C52.7446 58.7203 52.9226 57.8258 53.2685 56.9914C53.6143 56.1569 54.1212 55.3987 54.7603 54.7603ZM47.9595 50C47.26 50.8484 46.6551 51.7705 46.1555 52.75H34.875C34.1457 52.75 33.4462 53.0397 32.9305 53.5555C32.4147 54.0712 32.125 54.7707 32.125 55.5C32.125 56.897 32.961 58.228 34.688 59.2812C36.415 60.3345 38.9065 61 41.75 61C42.729 61 43.6668 60.912 44.5468 60.7663C44.6146 61.7013 44.764 62.606 44.995 63.4805C43.9229 63.6618 42.8373 63.752 41.75 63.75C38.5188 63.75 35.5075 63.002 33.2552 61.6325C31.0003 60.2575 29.375 58.1537 29.375 55.5C29.375 54.0413 29.9545 52.6424 30.9859 51.6109C32.0174 50.5795 33.4163 50 34.875 50H47.9595ZM41.75 32.125C43.7557 32.125 45.6793 32.9218 47.0975 34.34C48.5157 35.7582 49.3125 37.6818 49.3125 39.6875C49.3125 41.6932 48.5157 43.6168 47.0975 45.035C45.6793 46.4532 43.7557 47.25 41.75 47.25C39.7443 47.25 37.8207 46.4532 36.4025 45.035C34.9843 43.6168 34.1875 41.6932 34.1875 39.6875C34.1875 37.6818 34.9843 35.7582 36.4025 34.34C37.8207 32.9218 39.7443 32.125 41.75 32.125ZM60.2603 34.8998C61.7854 35.0563 63.1983 35.7727 64.2259 36.9105C65.2534 38.0483 65.8227 39.5266 65.8235 41.0598L65.7905 41.6923C65.653 43.0398 65.081 44.258 64.2175 45.2122C62.7448 44.7436 61.209 44.5034 59.6635 44.5C60.5735 44.4906 61.4427 44.1212 62.0812 43.4727C62.7197 42.8242 63.0754 41.9493 63.0707 41.0393C63.066 40.1293 62.7012 39.2581 62.056 38.6163C61.4108 37.9745 60.5378 37.6142 59.6278 37.6142C58.7177 37.6142 57.8447 37.9745 57.1995 38.6163C56.5543 39.2581 56.1895 40.1293 56.1848 41.0393C56.1801 41.9493 56.5358 42.8242 57.1743 43.4727C57.8128 44.1212 58.682 44.4906 59.592 44.5C58.0467 44.5025 56.5108 44.7417 55.038 45.2095C54.1525 44.234 53.6031 43.0003 53.4705 41.6895L53.4375 41.0625C53.4368 40.249 53.5965 39.4434 53.9074 38.6917C54.2184 37.94 54.6746 37.257 55.2498 36.6818C55.825 36.1066 56.508 35.6504 57.2597 35.3394C58.0114 35.0285 58.817 34.8688 59.6305 34.8695L60.2603 34.8998ZM41.75 34.875C40.4736 34.875 39.2496 35.382 38.347 36.2845C37.4445 37.1871 36.9375 38.4111 36.9375 39.6875C36.9375 40.9639 37.4445 42.1879 38.347 43.0905C39.2496 43.993 40.4736 44.5 41.75 44.5C43.0264 44.5 44.2504 43.993 45.153 43.0905C46.0555 42.1879 46.5625 40.9639 46.5625 39.6875C46.5625 38.4111 46.0555 37.1871 45.153 36.2845C44.2504 35.382 43.0264 34.875 41.75 34.875Z" fill="#208AF4"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Консультация</h3>
+                            <p class="step-description">
+                                Менеджер уточнит детали, поможет подобрать ассортимент и подготовит коммерческое предложение.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="step-icon">
+                                <path d="M63.75 30.75C65.2087 30.75 66.6076 31.3295 67.6391 32.3609C68.6705 33.3924 69.25 34.7913 69.25 36.25V53.4375C69.25 53.9845 69.0327 54.5091 68.6459 54.8959C68.2591 55.2827 67.7345 55.5 67.1875 55.5C66.6405 55.5 66.1159 55.2827 65.7291 54.8959C65.3423 54.5091 65.125 53.9845 65.125 53.4375V36.25C65.125 35.8853 64.9801 35.5356 64.7223 35.2777C64.4644 35.0199 64.1147 34.875 63.75 34.875H36.25C35.8853 34.875 35.5356 35.0199 35.2777 35.2777C35.0199 35.5356 34.875 35.8853 34.875 36.25V63.75C34.875 64.1147 35.0199 64.4644 35.2777 64.7223C35.5356 64.9801 35.8853 65.125 36.25 65.125H50.6875C51.2345 65.125 51.7591 65.3423 52.1459 65.7291C52.5327 66.1159 52.75 66.6405 52.75 67.1875C52.75 67.7345 52.5327 68.2591 52.1459 68.6459C51.7591 69.0327 51.2345 69.25 50.6875 69.25H36.25C34.7913 69.25 33.3924 68.6705 32.3609 67.6391C31.3295 66.6076 30.75 65.2087 30.75 63.75V36.25C30.75 34.7913 31.3295 33.3924 32.3609 32.3609C33.3924 31.3295 34.7913 30.75 36.25 30.75H63.75ZM67.105 58.855C67.2938 58.6524 67.5215 58.4898 67.7745 58.3771C68.0275 58.2644 68.3006 58.2038 68.5776 58.1989C68.8545 58.194 69.1296 58.2449 69.3864 58.3487C69.6432 58.4524 69.8765 58.6068 70.0724 58.8026C70.2682 58.9985 70.4226 59.2318 70.5263 59.4886C70.6301 59.7454 70.681 60.0205 70.6761 60.2974C70.6712 60.5744 70.6106 60.8475 70.4979 61.1005C70.3852 61.3535 70.2226 61.5812 70.02 61.77L63.145 68.645C62.808 68.982 62.3647 69.192 61.8904 69.2391C61.4162 69.2862 60.9402 69.1676 60.5435 68.9035L60.23 68.645L57.48 65.895L57.337 65.741C57.0094 65.3454 56.8413 64.8419 56.8653 64.3289C56.8894 63.8159 57.104 63.3303 57.4672 62.9672C57.8303 62.604 58.3159 62.3894 58.8289 62.3653C59.3419 62.3413 59.8454 62.5094 60.241 62.837L60.395 62.98L61.6875 64.2725L67.105 58.855ZM50.8993 56.886C51.4067 56.9386 51.8767 57.1775 52.2183 57.5564C52.5599 57.9352 52.749 58.4273 52.749 58.9375C52.749 59.4477 52.5599 59.9398 52.2183 60.3186C51.8767 60.6975 51.4067 60.9364 50.8993 60.989L50.6875 61H41.0625C40.5155 61 39.9909 60.7827 39.6041 60.3959C39.2173 60.0091 39 59.4845 39 58.9375C39 58.3905 39.2173 57.8659 39.6041 57.4791C39.9909 57.0923 40.5155 56.875 41.0625 56.875H50.6875L50.8993 56.886ZM58.9375 47.9375C59.4845 47.9375 60.0091 48.1548 60.3959 48.5416C60.7827 48.9284 61 49.453 61 50C61 50.547 60.7827 51.0716 60.3959 51.4584C60.0091 51.8452 59.4845 52.0625 58.9375 52.0625H41.0625C40.5155 52.0625 39.9909 51.8452 39.6041 51.4584C39.2173 51.0716 39 50.547 39 50C39 49.453 39.2173 48.9284 39.6041 48.5416C39.9909 48.1548 40.5155 47.9375 41.0625 47.9375H58.9375ZM58.9375 39C59.4845 39 60.0091 39.2173 60.3959 39.6041C60.7827 39.9909 61 40.5155 61 41.0625C61 41.6095 60.7827 42.1341 60.3959 42.5209C60.0091 42.9077 59.4845 43.125 58.9375 43.125H41.0625C40.5155 43.125 39.9909 42.9077 39.6041 42.5209C39.2173 42.1341 39 41.6095 39 41.0625C39 40.5155 39.2173 39.9909 39.6041 39.6041C39.9909 39.2173 40.5155 39 41.0625 39H58.9375Z" fill="#208AF4"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Согласование условий</h3>
+                            <p class="step-description">
+                                Обсуждаем объёмы, сроки и условия поставки. Заключаем договор и формируем заказ.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon-wrapper">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="step-icon">
+                                <path d="M35.3333 53.6667H39.7241C40.2631 53.6667 40.7948 53.7877 41.2769 54.0224L45.0206 55.8337C45.5028 56.0665 46.0344 56.1875 46.5753 56.1875H48.4856C50.3336 56.1875 51.4999 56.7107 51.4999 58.5001C51.4999 58.5734 51.4999 58.5001 50.9999 59.0001L47.0538 60.8717C46.2179 61.1026 45.3265 61.0218 44.5458 60.6444L40.5436 58.7084" stroke="#208AF4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M51.8333 58.25L60.2538 55.6631C60.9868 55.4382 61.7722 55.4506 62.4978 55.6985C63.2235 55.9464 63.8522 56.4172 64.2944 57.0436C64.9709 57.9786 64.6959 59.3206 63.7096 59.889L49.9321 67.8401C49.5013 68.0894 49.0242 68.2483 48.53 68.3073C48.0358 68.3662 47.5348 68.3239 47.0574 68.183L35.3333 64.7033M51.8333 37.1666H55.4999M55.4999 50H51.8333C48.3756 50 46.6486 50 45.5743 48.9256C44.4999 47.8513 44.4999 46.1243 44.4999 42.6666V39C44.4999 35.5423 44.4999 33.8153 45.5743 32.741C46.6486 31.6666 48.3756 31.6666 51.8333 31.6666H55.4999C58.9576 31.6666 60.6846 31.6666 61.7589 32.741C62.8333 33.8153 62.8333 35.5423 62.8333 39V42.6666C62.8333 46.1243 62.8333 47.8513 61.7589 48.9256C60.6846 50 58.9576 50 55.4999 50Z" stroke="#208AF4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-title">Доставка</h3>
+                            <p class="step-description">
+                                Организуем доставку с контролем температуры и сроков. Гарантируем сохранность продукции при транспортировке.
+                            </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Groups Section -->
+    <section id="product-groups" class="product-groups">
+        <div class="container">
+            <div class="product-groups-header">
+                <h2 class="product-groups-title">Товарные группы</h2>
+                <p class="product-groups-description">
+                    Ассортимент включает замороженные продукты и мороженое от надёжных брендов — всё, что нужно для стабильных поставок и уверенных продаж.
+                </p>
+            </div>
+        </div>
+        
+        <div class="product-cards-wrapper">
+            <button class="product-nav-arrow product-nav-arrow-left" aria-label="Previous products" style="display: none;">
+                <img src="SVG%20icons/Shevron%20left.svg" alt="Previous" class="nav-arrow-icon">
+            </button>
+            <div class="product-cards-container">
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
+                    <p class="product-card-label">Мороженое</p>
+                </div>
+            </div>
+            <button class="product-nav-arrow product-nav-arrow-right" aria-label="Next products">
+                <img src="SVG%20icons/Shevron%20right.svg" alt="Next" class="nav-arrow-icon">
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials-content">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">Отзывы</h2>
+                <p class="testimonials-subtitle">
+                    Мы ценим доверие наших клиентов и партнёров — их мнение помогает нам становиться лучше.
+                </p>
+            </div>
+
+            <div class="testimonials-body">
+                <div class="testimonials-image-wrapper">
+                    <img src="Images/Ice-cream photo.png" alt="Ассортимент мороженого" class="testimonials-image">
+                </div>
+
+                <div class="testimonials-slider">
+                    <button class="testimonial-nav testimonial-nav-prev" aria-label="Предыдущие отзывы">
+                        <svg class="testimonial-nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M14.5 6L9 12L14.5 18" stroke="#208AF4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <div class="testimonials-cards-wrapper">
+                        <div class="testimonials-cards is-active">
+                            <article class="testimonial-card">
+                                <div class="testimonial-card-header">
+                                    <img src="Images/User 1.png" alt="Анна Петрова" class="testimonial-avatar-photo">
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-title-row">
+                                            <div class="testimonial-name">Анна Петрова</div>
+                                            <div class="testimonial-stars">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-subtitle">руководитель отдела закупок, ООО «ФудМаркет»</div>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    Сотрудничаем с компанией уже несколько лет. Всегда уверены в качестве продукции и своевременной доставке. Менеджеры быстро реагируют на запросы и помогают подобрать оптимальные условия. Это партнёр, на которого действительно можно положиться.
+                                </p>
+                            </article>
+
+                            <article class="testimonial-card">
+                                <div class="testimonial-card-header">
+                                    <img src="Images/User 2.png" alt="Игорь Смирнов" class="testimonial-avatar-photo">
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-title-row">
+                                            <div class="testimonial-name">Игорь Смирнов</div>
+                                            <div class="testimonial-stars">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-subtitle">директор по продажам, ООО «ТехноСервис»</div>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    Работаем с этой компанией на постоянной основе. Они всегда предоставляют современное оборудование и высокий уровень сервиса. Обратная связь быстрая и профессиональная, что позволяет нам оставаться конкурентоспособными на рынке.
+                                </p>
+                            </article>
+
+                            <article class="testimonial-card">
+                                <div class="testimonial-card-header">
+                                    <img src="Images/User 3.png" alt="Мария Кузнецова" class="testimonial-avatar-photo">
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-title-row">
+                                            <div class="testimonial-name">Мария Кузнецова</div>
+                                            <div class="testimonial-stars">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG%20icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-subtitle">менеджер по проектам, ЗАО «ЭкСтрой»</div>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    Сотрудничество с данной фирмой — наш залог успешных проектов. Их команда всегда готова предложить инновационные решения и гибкие условия. Мы ценим их подход к каждому клиенту и индивидуальный подход к нашим требованиям.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="testimonials-cards">
+                            <article class="testimonial-card">
+                                <div class="testimonial-card-header">
+                                    <img src="Images/User 1.png" alt="Сергей Орлов" class="testimonial-avatar-photo">
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-title-row">
+                                            <div class="testimonial-name">Сергей Орлов</div>
+                                            <div class="testimonial-stars">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-subtitle">коммерческий директор, ООО «СеверПродукт»</div>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    Получаем свежую продукцию точно в срок, а менеджеры всегда держат связь и оперативно решают нестандартные запросы. С таким партнёром чувствуешь поддержку в любом вопросе.
+                                </p>
+                            </article>
+
+                            <article class="testimonial-card">
+                                <div class="testimonial-card-header">
+                                    <img src="Images/User 2.png" alt="Елена Крапивина" class="testimonial-avatar-photo">
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-title-row">
+                                            <div class="testimonial-name">Елена Крапивина</div>
+                                            <div class="testimonial-stars">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-subtitle">владелец сети кафе «Майское настроение»</div>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    Рецептуры стабильные, служба качества контролирует партии, а поставки гибко подстраиваются под сезонность. Нам спокойно планировать меню, потому что знаем — всё будет в наличии.
+                                </p>
+                            </article>
+
+                            <article class="testimonial-card">
+                                <div class="testimonial-card-header">
+                                    <img src="Images/User 3.png" alt="Виктория Лебедева" class="testimonial-avatar-photo">
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-title-row">
+                                            <div class="testimonial-name">Виктория Лебедева</div>
+                                            <div class="testimonial-stars">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                                <img src="SVG icons/Star.svg" alt="" class="testimonial-star" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-subtitle">руководитель проектов, ЗАО «Сладкий Дом»</div>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    После перехода на их продукцию мы расширили линейку десертов и получили отличный отклик от покупателей. Команда помогает с промо и делится аналитикой по рынку.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="testimonial-nav testimonial-nav-next" aria-label="Следующие отзывы">
+                        <svg class="testimonial-nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M9.5 6L15 12L9.5 18" stroke="#208AF4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages-section" class="advantages-section">
+        <div class="container">
+            <div class="advantages-content">
+                <div class="advantages-header">
+                    <h2 class="advantages-title">Наши преимущества</h2>
+                    <p class="advantages-subtitle">
+                        Мы ценим качество, стабильность и долгосрочные отношения — всё, что важно для уверенного партнёрства.
+                    </p>
+                </div>
+                
+                <div class="advantages-cards-container">
+                    <!-- First 3 Cards (Row Above) -->
+                    <div class="advantages-row">
+                        <div class="advantage-card">
+                            <div class="advantage-icon-wrapper">
+                                <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" class="advantage-icon">
+                                    <path d="M30.9969 43.1603L31.3125 42.8131V41.1008L26.1411 30.1836H23.7339L18.5625 41.1008V42.8965L18.8437 43.2017C19.6159 44.0378 20.5527 44.7053 21.5951 45.1622C22.6376 45.6191 23.7633 45.8556 24.9015 45.8567H24.9294C26.0723 45.8517 27.2017 45.6094 28.2461 45.1453C29.2905 44.6811 30.2272 44.0052 30.9969 43.1603ZM29.1875 41.9779C28.0538 43.1039 26.52 43.7346 24.9222 43.7319H24.9002C23.3305 43.7398 21.8194 43.1358 20.6875 42.0482V41.5789L24.9375 32.6066L29.1875 41.5789V41.9779ZM45.2661 30.1836H42.8589L37.6875 41.1008V42.8965L37.9687 43.2017C38.7409 44.0378 39.6777 44.7053 40.7201 45.1622C41.7626 45.6191 42.8883 45.8556 44.0265 45.8567H44.0544C45.1973 45.8517 46.3267 45.6094 47.3711 45.1452C48.4155 44.681 49.3522 44.0051 50.1219 43.1602L50.4375 42.8131V41.1008L45.2661 30.1836ZM48.3125 41.9779C47.1788 43.1039 45.645 43.7346 44.0472 43.7319H44.0252C42.4555 43.7398 40.9444 43.1358 39.8125 42.0482V41.5789L44.0625 32.6066L48.3125 41.5789V41.9779Z" fill="#208AF4"/>
+                                    <path d="M35.5625 30.5594C36.1536 30.3817 36.6914 30.0603 37.1278 29.6239C37.5642 29.1875 37.8856 28.6497 38.0633 28.0586H45.125V25.9336H38.0633C37.8346 25.1662 37.3642 24.4931 36.7222 24.0145C36.0802 23.5359 35.3008 23.2773 34.5 23.2773C33.6992 23.2773 32.9198 23.5359 32.2778 24.0145C31.6358 24.4931 31.1654 25.1662 30.9367 25.9336H23.875V28.0586H30.9367C31.1144 28.6497 31.4358 29.1875 31.8722 29.6239C32.3086 30.0603 32.8464 30.3817 33.4375 30.5594V48.2461H26.5312V50.3711H42.4688V48.2461H35.5625V30.5594ZM32.9062 26.9961C32.9062 26.6809 32.9997 26.3727 33.1748 26.1107C33.35 25.8486 33.5989 25.6443 33.8901 25.5237C34.1813 25.403 34.5018 25.3715 34.8109 25.433C35.1201 25.4945 35.4041 25.6463 35.627 25.8691C35.8498 26.092 36.0016 26.376 36.0631 26.6852C36.1246 26.9943 36.0931 27.3148 35.9724 27.606C35.8518 27.8972 35.6475 28.1461 35.3854 28.3212C35.1233 28.4964 34.8152 28.5898 34.5 28.5898C34.0773 28.5898 33.6719 28.4219 33.373 28.123C33.0742 27.8242 32.9062 27.4188 32.9062 26.9961Z" fill="#208AF4"/>
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-title">Цена и качество</h3>
+                                <p class="advantage-description">
+                                    Цена всегда соответствует качеству товара, который мы поставляем. Нашим постоянным партнёрам - специальные цены и индивидуальные условия.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon-wrapper">
+                                <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" class="advantage-icon">
+                                    <path d="M22.8592 21.5035L34.5 18.9167L46.1407 21.5035C46.4553 21.5734 46.7367 21.7485 46.9383 21.9999C47.14 22.2513 47.2499 22.5639 47.25 22.8862V37.0344C47.2499 38.4337 46.9043 39.8113 46.244 41.045C45.5837 42.2787 44.629 43.3303 43.4647 44.1064L34.5 50.0833L25.5353 44.1064C24.3712 43.3304 23.4167 42.2791 22.7563 41.0456C22.096 39.8122 21.7503 38.4349 21.75 37.0358V22.8862C21.7501 22.5639 21.86 22.2513 22.0617 21.9999C22.2633 21.7485 22.5447 21.5734 22.8592 21.5035ZM24.5833 24.0223V37.0344C24.5833 37.9672 24.8136 38.8856 25.2538 39.7081C25.6939 40.5305 26.3303 41.2316 27.1064 41.7491L34.5 46.6791L41.8936 41.7491C42.6695 41.2317 43.3057 40.5309 43.7459 39.7087C44.186 38.8865 44.4164 37.9684 44.4167 37.0358V24.0223L34.5 21.8208L24.5833 24.0223Z" fill="#208AF4"/>
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-title">Репутация и доверие</h3>
+                                <p class="advantage-description">
+                                    Мы строим отношения, которые основаны на надёжности и уважении. Работаем только на долгосрочную перспективу.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon-wrapper">
+                                <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" class="advantage-icon">
+                                    <path d="M40.2403 24.6244C40.0127 24.9232 39.9131 25.3 39.9633 25.6722C40.0135 26.0444 40.2095 26.3814 40.508 26.6092C42.0542 27.7871 43.2203 29.3934 43.8613 31.2285C44.5023 33.0636 44.59 35.0465 44.1136 36.9311C43.6372 38.8156 42.6175 40.5186 41.1814 41.8285C39.7452 43.1384 37.9559 43.9975 36.0356 44.2991L37.04 43.2933C37.2981 43.0261 37.4409 42.6682 37.4377 42.2968C37.4344 41.9253 37.2854 41.57 37.0228 41.3073C36.7601 41.0447 36.4048 40.8957 36.0334 40.8925C35.6619 40.8892 35.3041 41.032 35.0369 41.2901L31.4952 44.8317C31.2296 45.0974 31.0804 45.4577 31.0804 45.8333C31.0804 46.209 31.2296 46.5693 31.4952 46.8349L35.0369 50.3766C35.3041 50.6346 35.6619 50.7774 36.0334 50.7742C36.4048 50.771 36.7601 50.622 37.0228 50.3593C37.2854 50.0967 37.4344 49.7413 37.4377 49.3699C37.4409 48.9985 37.2981 48.6406 37.04 48.3734L35.8458 47.1806C38.3845 46.9108 40.7839 45.8852 42.7332 44.2365C44.6825 42.5877 46.092 40.3918 46.7792 37.933C47.4664 35.4742 47.3998 32.8657 46.5878 30.4452C45.7759 28.0247 44.256 25.9037 42.225 24.3567C41.9263 24.1291 41.5494 24.0295 41.1772 24.0797C40.8051 24.1299 40.4681 24.3258 40.2403 24.6244ZM37.5061 22.1651L33.9645 18.6234C33.7101 18.3666 33.3672 18.2168 33.006 18.2045C32.6448 18.1923 32.2925 18.3185 32.0214 18.5575C31.7502 18.7964 31.5806 19.13 31.5473 19.4899C31.514 19.8498 31.6196 20.2088 31.8423 20.4934L31.9599 20.6266L33.1541 21.8208C30.6578 22.0864 28.2954 23.0829 26.363 24.6854C24.4306 26.2879 23.0142 28.4252 22.2914 30.8293C21.5686 33.2334 21.5715 35.7974 22.2998 38.1998C23.0281 40.6023 24.4493 42.7364 26.3853 44.3345C26.6759 44.5645 27.0452 44.6715 27.4137 44.6324C27.7823 44.5933 28.1209 44.4114 28.3569 44.1255C28.5929 43.8397 28.7074 43.4727 28.676 43.1034C28.6445 42.7341 28.4696 42.3918 28.1887 42.15C26.7156 40.9336 25.6251 39.3176 25.0483 37.4963C24.4714 35.675 24.4328 33.7259 24.937 31.8832C25.4412 30.0405 26.4668 28.3826 27.8906 27.1088C29.3143 25.8349 31.0757 24.9993 32.9629 24.7023L31.9599 25.7067C31.7058 25.9617 31.5583 26.3038 31.5473 26.6635C31.5363 27.0233 31.6627 27.3738 31.9007 27.6437C32.1388 27.9137 32.4707 28.0829 32.829 28.1171C33.1873 28.1512 33.5451 28.0477 33.8299 27.8275L33.963 27.7099L37.5047 24.1682C37.7486 23.9243 37.8951 23.5998 37.9168 23.2555C37.9384 22.9112 37.8337 22.5708 37.6223 22.2982L37.5061 22.1651Z" fill="#208AF4"/>
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-title">Гибкость и внимание</h3>
+                                <p class="advantage-description">
+                                    Каждый партнёр для нас уникален. Мы подстраиваемся под ваши потребности, чтобы сотрудничество было комфортным.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 4th Card (Full Width, Below) -->
+                    <div class="advantage-card advantage-card-full">
+                        <div class="advantage-icon-wrapper">
+                            <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" class="advantage-icon">
+                                <path d="M49.2741 24.9762C49.8425 24.5648 49.97 23.7738 49.5556 23.2096C49.1413 22.6453 48.3444 22.5187 47.776 22.9301L43.8181 25.7883L43.2922 25.4402C42.2456 24.7441 41.0131 24.375 39.7541 24.375H28.9591C27.5406 24.375 26.17 24.8443 25.0597 25.6986L21.2241 22.9301C20.6556 22.5187 19.8588 22.6453 19.4444 23.2096C19.03 23.7738 19.1575 24.5648 19.726 24.9762L24.401 28.3512C24.911 28.715 25.6069 28.6623 26.0531 28.2246L26.2603 28.0189C26.9775 27.307 27.9497 26.9062 28.9644 26.9062H31.4241L26.5525 31.742C25.7238 32.5646 25.7238 33.8988 26.5525 34.7267L26.595 34.7689C29.0813 37.2422 33.1188 37.2422 35.6103 34.7689L37.05 33.3398L42.2456 38.4972C43.0744 39.3199 43.0744 40.6541 42.2456 41.482L41.725 41.9988L40.0781 40.364C39.5788 39.8683 38.7713 39.8683 38.2772 40.364C37.7831 40.8598 37.7778 41.6613 38.2772 42.1517L39.7647 43.6283C38.835 44.1767 37.7885 44.509 36.7047 44.6039L34.1281 42.041C33.6288 41.5453 32.8213 41.5453 32.3272 42.041C31.8331 42.5367 31.8278 43.3383 32.3272 43.8287L33.1241 44.6197H32.9222C31.0044 44.6197 29.1663 43.8656 27.8116 42.5209L20.9531 35.7129C20.4538 35.2172 19.6463 35.2172 19.1522 35.7129C18.6581 36.2086 18.6528 37.0101 19.1522 37.5006L26.0106 44.3139C27.8435 46.1332 30.3297 47.1562 32.9222 47.1562H35.6741L35.7272 47.209L35.7803 47.1562H36.0831C38.6756 47.1562 41.1619 46.1332 42.9947 44.3139L44.0519 43.2644C44.1156 43.2012 44.1741 43.1431 44.2325 43.0799C44.2697 43.0535 44.3016 43.0219 44.3335 42.9902L49.8531 37.5058C50.3525 37.0101 50.3525 36.2086 49.8531 35.7182C49.3538 35.2277 48.5463 35.2224 48.0522 35.7182L45.1941 38.5553C44.971 37.8803 44.5938 37.2422 44.0519 36.7043L37.9531 30.6504C37.4538 30.1547 36.6463 30.1547 36.1522 30.6504L33.8094 32.976C32.4016 34.3734 30.1703 34.4525 28.6722 33.2185L33.9156 28.0137C34.6275 27.307 35.5944 26.9062 36.6038 26.901H39.7647C40.5191 26.901 41.2575 27.1224 41.8844 27.539L43.1435 28.3828C43.5897 28.6781 44.1688 28.6623 44.5991 28.3512L49.2741 24.9762Z" fill="#208AF4"/>
+                            </svg>
+                    </div>
+                        <div class="advantage-content">
+                            <h3 class="advantage-title">Честность и партнёрство</h3>
+                            <p class="advantage-description">
+                                Открыто делимся выгодой и всегда выполняем обещания. Для нас важно, чтобы вы зарабатывали вместе с нами. Мы верим, что честное партнёрство строится на доверии, прозрачных условиях и взаимной выгоде. Сотрудничество с нами — это стабильность, уважение и рост для обеих сторон.
+                            </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video-section" class="video-section">
+        <div class="container">
+            <div class="video-section-content">
+                <div class="video-section-header">
+                    <h2 class="video-section-title">Наслаждайтесь вкусом, которому доверяют</h2>
+                    <p class="video-section-subtitle">
+                        Когда вкус, качество и удовольствие соединяются, результат говорит сам за себя. Мы делаем продукцию, которая объединяет людей.
+                    </p>
+                    </div>
+                
+                <div class="video-cards-container">
+                    <div class="video-card">
+                        <iframe class="video-iframe" src="https://vkvideo.ru/video_ext.php?oid=-161382414&id=456239217&autoplay=1" width="640" height="360" style="background-color: #000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="video-card">
+                        <iframe class="video-iframe" src="https://vkvideo.ru/video_ext.php?oid=-229221819&id=456239065&autoplay=1" width="640" height="360" style="background-color: #000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <div class="contacts-header">
+                <h2 class="contacts-title">Контакты</h2>
+            </div>
+            <div class="contacts-content">
+                <div class="contacts-column">
+                    <div class="contacts-info-card">
+                        <div class="contacts-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">
+                                    <img src="SVG%20icons/Phone%20icon.svg" alt="Телефон">
+                                </span>
+                                <div class="contact-text">
+                                    <div class="contact-label">Телефон</div>
+                                    <div class="contact-value">+7 (903) 123-45-67</div>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">
+                                    <img src="SVG%20icons/Mail%20icon.svg" alt="Почта">
+                                </span>
+                                <div class="contact-text">
+                                    <div class="contact-label">Почта</div>
+                                    <div class="contact-value">info@yanitorg.ru</div>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">
+                                    <img src="SVG%20icons/Location%20icon.svg" alt="Адрес">
+                                </span>
+                                <div class="contact-text">
+                                    <div class="contact-label">Адрес</div>
+                                    <div class="contact-value">Москва, ул. Большая Ордынка, 17</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-actions-card">
+                        <a href="https://t.me/username" class="contact-action" target="_blank" rel="noopener noreferrer">
+                            <img src="SVG%20icons/Telegram%20button.svg" alt="Telegram">
+                        </a>
+                        <a href="https://wa.me/79031234567" class="contact-action" target="_blank" rel="noopener noreferrer">
+                            <img src="SVG%20icons/Whatsapp%20button.svg" alt="Whatsapp">
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6446757360084!2d37.61749437766804!3d55.75124439473491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a363f3b7f%3A0x8c3cf92640b6e75b!2z0JrRg9C70YzQsdCw0L3QvtC70YzQvdC40LrQsA!5e0!3m2!1sru!2sru!4v1731650400000!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="footer-logo">
+                    <p class="footer-description">
+                        Поставляем продукцию ведущих производителей замороженных и охлаждённых товаров.
+                    </p>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <div class="footer-column-title">Меню</div>
+                        <a href="#hero" class="footer-link">Главная</a>
+                        <a href="#product-groups" class="footer-link">Продукция</a>
+                        <a href="#about-company" class="footer-link">О компании</a>
+                        <a href="#testimonials" class="footer-link">Отзывы</a>
+                    </div>
+                    <div class="footer-column">
+                        <div class="footer-column-title">Соцсети</div>
+                        <a href="https://wa.me/79031234567" target="_blank" rel="noopener noreferrer" class="footer-link">Whatsapp</a>
+                        <a href="https://t.me/username" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2024 &nbsp; Все права защищены</div>
+                <a href="#" class="footer-privacy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Product carousel scroll functionality
+        const productCardsContainer = document.querySelector('.product-cards-container');
+        const productNavArrowRight = document.querySelector('.product-nav-arrow-right');
+        const productNavArrowLeft = document.querySelector('.product-nav-arrow-left');
+        
+        function updateArrowVisibility() {
+            if (!productCardsContainer) return;
+            
+            const isAtStart = productCardsContainer.scrollLeft === 0;
+            const isAtEnd = productCardsContainer.scrollLeft + productCardsContainer.clientWidth >= productCardsContainer.scrollWidth - 1;
+            
+            if (productNavArrowLeft) {
+                productNavArrowLeft.style.display = isAtStart ? 'none' : 'flex';
+            }
+            
+            if (productNavArrowRight) {
+                productNavArrowRight.style.display = isAtEnd ? 'none' : 'flex';
+            }
+        }
+        
+        if (productNavArrowRight && productCardsContainer) {
+            productNavArrowRight.addEventListener('click', () => {
+                const cardWidth = productCardsContainer.querySelector('.product-card').offsetWidth;
+                const gap = 32; // 32px gap between cards
+                const scrollAmount = cardWidth + gap;
+                
+                productCardsContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        if (productNavArrowLeft && productCardsContainer) {
+            productNavArrowLeft.addEventListener('click', () => {
+                const cardWidth = productCardsContainer.querySelector('.product-card').offsetWidth;
+                const gap = 32; // 32px gap between cards
+                const scrollAmount = cardWidth + gap;
+                
+                productCardsContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Update arrow visibility on scroll
+        if (productCardsContainer) {
+            productCardsContainer.addEventListener('scroll', updateArrowVisibility);
+            // Initial check
+            updateArrowVisibility();
+        }
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+        
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = nav.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        }
+
+        // Scroll-based active menu item detection
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link[data-section]');
+        const headerElement = document.querySelector('.header');
+        const headerHeight = headerElement ? headerElement.offsetHeight : 80;
+
+        function updateActiveNavLink() {
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionId = section.getAttribute('id');
+                
+                // Check if section is in view (with offset for header)
+                if (sectionTop <= headerHeight + 100 && sectionTop >= -section.offsetHeight + headerHeight + 100) {
+                    currentSection = sectionId;
+                }
+            });
+
+            // If we're at the top of the page, make hero active
+            if (window.scrollY < 200) {
+                currentSection = 'hero';
+            }
+
+            // Update active class on nav links
+            navLinks.forEach(link => {
+                const linkSection = link.getAttribute('data-section');
+                if (linkSection === currentSection) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Update on scroll
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Update on page load
+        updateActiveNavLink();
+
+        // Smooth scroll when clicking nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('data-section');
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Testimonials slider
+        const testimonialsWrapper = document.querySelector('.testimonials-cards-wrapper');
+        const testimonialGroups = testimonialsWrapper ? testimonialsWrapper.querySelectorAll('.testimonials-cards') : [];
+        const prevTestimonialBtn = document.querySelector('.testimonial-nav-prev');
+        const nextTestimonialBtn = document.querySelector('.testimonial-nav-next');
+        let testimonialIndex = 0;
+
+        let isAnimatingTestimonials = false;
+
+        function updateTestimonials(newIndex, direction) {
+            if (!testimonialGroups.length) return;
+
+            const currentGroup = testimonialsWrapper.querySelector('.testimonials-cards.is-active');
+            const nextGroup = testimonialGroups[newIndex];
+
+            if (currentGroup === nextGroup) {
+                isAnimatingTestimonials = false;
+                return;
+            }
+
+            if (currentGroup) {
+                currentGroup.classList.remove('is-active', 'is-entering');
+                currentGroup.classList.add('is-leaving');
+                currentGroup.addEventListener('animationend', function handleLeave() {
+                    currentGroup.classList.remove('is-leaving');
+                    currentGroup.removeEventListener('animationend', handleLeave);
+                });
+            }
+
+            nextGroup.classList.add('is-active', 'is-entering');
+            nextGroup.addEventListener('animationend', function handleEnter() {
+                nextGroup.classList.remove('is-entering');
+                nextGroup.removeEventListener('animationend', handleEnter);
+            });
+
+            testimonialIndex = newIndex;
+            setTimeout(() => {
+                isAnimatingTestimonials = false;
+            }, 450);
+        }
+
+        function showNextTestimonials(direction = 1) {
+            if (!testimonialGroups.length || isAnimatingTestimonials) return;
+            isAnimatingTestimonials = true;
+            const nextIndex = (testimonialIndex + direction + testimonialGroups.length) % testimonialGroups.length;
+            updateTestimonials(nextIndex, direction);
+        }
+
+        if (prevTestimonialBtn) {
+            prevTestimonialBtn.addEventListener('click', () => showNextTestimonials(-1));
+        }
+
+        if (nextTestimonialBtn) {
+            nextTestimonialBtn.addEventListener('click', () => showNextTestimonials(1));
+        }
+
+        updateTestimonials(0, 1);
+    </script>
+</body>
+</html>
+
