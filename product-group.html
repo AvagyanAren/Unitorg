@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яниторг group - Мороженое</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="index.html#hero" class="nav-link">Главная</a>
+                    <a href="index.html#about-company" class="nav-link">О компании</a>
+                    <a href="index.html#product-groups" class="nav-link active">Продукция</a>
+                    <a href="index.html#testimonials" class="nav-link">Отзывы</a>
+                    <a href="index.html#contacts" class="nav-link">Контакты</a>
+                </nav>
+
+                <!-- Contact Container -->
+                <div class="contact-container">
+                    <a href="tel:" class="contact-icon contact-phone">
+                        <img src="SVG%20icons/solar_phone-bold.svg" alt="Phone" class="contact-svg">
+                    </a>
+                    <div class="contact-separator"></div>
+                    <a href="#" class="contact-icon contact-telegram">
+                        <img src="SVG%20icons/Telegram%20Logo.svg" alt="Telegram" class="contact-svg">
+                    </a>
+                    <a href="#" class="contact-icon contact-whatsapp">
+                        <img src="SVG%20icons/Whatsapp%20logo.svg" alt="WhatsApp" class="contact-svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Group Detail Section -->
+    <section class="product-group-detail">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html" class="breadcrumb-link">Главная</a>
+                <span class="breadcrumb-separator">></span>
+                <span class="breadcrumb-current">Товарные группы</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="product-group-detail-title">Мороженое</h1>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-arrow pagination-prev" aria-label="Previous page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="#208AF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="pagination-numbers" id="paginationNumbers">
+                    <!-- Pagination numbers will be dynamically generated -->
+                </div>
+                <button class="pagination-arrow pagination-next" aria-label="Next page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="#208AF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="footer-logo">
+                    <p class="footer-description">
+                        Поставляем продукцию ведущих производителей замороженных и охлаждённых товаров.
+                    </p>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <div class="footer-column-title">Меню</div>
+                        <a href="index.html#hero" class="footer-link">Главная</a>
+                        <a href="index.html#product-groups" class="footer-link">Продукция</a>
+                        <a href="index.html#about-company" class="footer-link">О компании</a>
+                        <a href="index.html#testimonials" class="footer-link">Отзывы</a>
+                    </div>
+                    <div class="footer-column">
+                        <div class="footer-column-title">Соцсети</div>
+                        <a href="https://wa.me/79031234567" target="_blank" rel="noopener noreferrer" class="footer-link">Whatsapp</a>
+                        <a href="https://t.me/username" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2024 &nbsp; Все права защищены</div>
+                <a href="privacy-policy.html" class="footer-privacy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product data - in a real app, this would come from an API
+        // Generate 120 products (10 pages * 12 products per page)
+        const products = [];
+        for (let i = 1; i <= 120; i++) {
+            products.push({
+                id: i,
+                name: 'Мороженое',
+                image: 'Images/Category%20image-%20Ice-cream.png',
+                group: 'ice-cream'
+            });
+        }
+
+        let currentPage = 1;
+        const productsPerPage = 12;
+
+        // Get group name from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const groupName = urlParams.get('group') || 'ice-cream';
+        const groupTitle = urlParams.get('title') || 'Мороженое';
+
+        // Update title
+        document.querySelector('.product-group-detail-title').textContent = groupTitle;
+
+        function renderProducts(page = 1) {
+            const startIndex = (page - 1) * productsPerPage;
+            const endIndex = startIndex + productsPerPage;
+            const pageProducts = products.slice(startIndex, endIndex);
+            
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+            
+            pageProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-item-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-item-image">
+                    <p class="product-item-label">${product.name}</p>
+                `;
+                productCard.addEventListener('click', () => {
+                    window.location.href = `product.html?id=${product.id}&name=${encodeURIComponent(product.name)}`;
+                });
+                grid.appendChild(productCard);
+            });
+
+            renderPagination();
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(products.length / productsPerPage);
+            const paginationNumbers = document.getElementById('paginationNumbers');
+            paginationNumbers.innerHTML = '';
+
+            // Always show first page
+            if (totalPages > 0) {
+                const page1 = document.createElement('button');
+                page1.className = `pagination-number ${currentPage === 1 ? 'active' : ''}`;
+                page1.textContent = '1';
+                page1.addEventListener('click', () => {
+                    currentPage = 1;
+                    renderProducts(currentPage);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+                paginationNumbers.appendChild(page1);
+            }
+
+            // Show pages around current page
+            if (totalPages > 1) {
+                const page2 = document.createElement('button');
+                page2.className = `pagination-number ${currentPage === 2 ? 'active' : ''}`;
+                page2.textContent = '2';
+                page2.addEventListener('click', () => {
+                    currentPage = 2;
+                    renderProducts(currentPage);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+                paginationNumbers.appendChild(page2);
+            }
+
+            if (totalPages > 2) {
+                const page3 = document.createElement('button');
+                page3.className = `pagination-number ${currentPage === 3 ? 'active' : ''}`;
+                page3.textContent = '3';
+                page3.addEventListener('click', () => {
+                    currentPage = 3;
+                    renderProducts(currentPage);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+                paginationNumbers.appendChild(page3);
+            }
+
+            // Show ellipsis if needed (when current page is far from end)
+            if (totalPages > 3 && currentPage < totalPages - 2) {
+                const ellipsis = document.createElement('span');
+                ellipsis.className = 'pagination-ellipsis';
+                ellipsis.textContent = '...';
+                paginationNumbers.appendChild(ellipsis);
+            }
+
+            // Always show last page (page 10) if there are more than 3 pages
+            if (totalPages > 3) {
+                const lastPage = document.createElement('button');
+                lastPage.className = `pagination-number ${currentPage === totalPages ? 'active' : ''}`;
+                lastPage.textContent = totalPages.toString();
+                lastPage.addEventListener('click', () => {
+                    currentPage = totalPages;
+                    renderProducts(currentPage);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+                paginationNumbers.appendChild(lastPage);
+            }
+
+            // Update arrow buttons
+            const prevBtn = document.querySelector('.pagination-prev');
+            const nextBtn = document.querySelector('.pagination-next');
+            if (prevBtn) prevBtn.disabled = currentPage === 1;
+            if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+        }
+
+        // Pagination arrow handlers
+        document.querySelector('.pagination-prev').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderProducts(currentPage);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        document.querySelector('.pagination-next').addEventListener('click', () => {
+            const totalPages = Math.ceil(products.length / productsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderProducts(currentPage);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        // Initial render
+        renderProducts(currentPage);
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+        
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
+

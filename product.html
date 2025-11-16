@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яниторг group - Мороженое Semangka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="index.html#hero" class="nav-link">Главная</a>
+                    <a href="index.html#about-company" class="nav-link">О компании</a>
+                    <a href="index.html#product-groups" class="nav-link active">Продукция</a>
+                    <a href="index.html#testimonials" class="nav-link">Отзывы</a>
+                    <a href="index.html#contacts" class="nav-link">Контакты</a>
+                </nav>
+
+                <!-- Contact Container -->
+                <div class="contact-container">
+                    <a href="tel:" class="contact-icon contact-phone">
+                        <img src="SVG%20icons/solar_phone-bold.svg" alt="Phone" class="contact-svg">
+                    </a>
+                    <div class="contact-separator"></div>
+                    <a href="#" class="contact-icon contact-telegram">
+                        <img src="SVG%20icons/Telegram%20Logo.svg" alt="Telegram" class="contact-svg">
+                    </a>
+                    <a href="#" class="contact-icon contact-whatsapp">
+                        <img src="SVG%20icons/Whatsapp%20logo.svg" alt="WhatsApp" class="contact-svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html" class="breadcrumb-link">Главная</a>
+                <span class="breadcrumb-separator">></span>
+                <a href="product-group.html?group=ice-cream&title=Мороженое" class="breadcrumb-link">Товарные группы</a>
+                <span class="breadcrumb-separator">></span>
+                <span class="breadcrumb-current" id="breadcrumbGroup">Мороженое</span>
+            </div>
+
+            <!-- Product Content -->
+            <div class="product-detail-content">
+                <!-- Product Image -->
+                <div class="product-detail-image-wrapper">
+                    <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое Semangka" class="product-detail-image" id="productImage">
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info">
+                    <h1 class="product-detail-title" id="productTitle">Мороженое Semangka</h1>
+                    <p class="product-detail-description" id="productDescription">
+                        Высококачественное мороженое с натуральными ингредиентами. Идеально подходит для розничной продажи.
+                    </p>
+
+                    <!-- Characteristics Card -->
+                    <div class="product-characteristics">
+                        <h3 class="characteristics-title">Характеристики</h3>
+                        <div class="characteristics-list" id="characteristicsList">
+                            <div class="characteristic-item">
+                                <span class="characteristic-label">Вес:</span>
+                                <span class="characteristic-value">500г</span>
+                            </div>
+                            <div class="characteristic-item">
+                                <span class="characteristic-label">Упаковка:</span>
+                                <span class="characteristic-value">Пластиковый пакет</span>
+                            </div>
+                            <div class="characteristic-item">
+                                <span class="characteristic-label">Условия хранения:</span>
+                                <span class="characteristic-value">-18°C</span>
+                            </div>
+                            <div class="characteristic-item">
+                                <span class="characteristic-label">Срок годности:</span>
+                                <span class="characteristic-value">12 месяцев</span>
+                            </div>
+                            <div class="characteristic-item">
+                                <span class="characteristic-label">Производитель:</span>
+                                <span class="characteristic-value">ООО "Холод"</span>
+                            </div>
+                            <div class="characteristic-item">
+                                <span class="characteristic-label">Страна:</span>
+                                <span class="characteristic-value">Россия</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="footer-logo">
+                    <p class="footer-description">
+                        Поставляем продукцию ведущих производителей замороженных и охлаждённых товаров.
+                    </p>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <div class="footer-column-title">Меню</div>
+                        <a href="index.html#hero" class="footer-link">Главная</a>
+                        <a href="index.html#product-groups" class="footer-link">Продукция</a>
+                        <a href="index.html#about-company" class="footer-link">О компании</a>
+                        <a href="index.html#testimonials" class="footer-link">Отзывы</a>
+                    </div>
+                    <div class="footer-column">
+                        <div class="footer-column-title">Соцсети</div>
+                        <a href="https://wa.me/79031234567" target="_blank" rel="noopener noreferrer" class="footer-link">Whatsapp</a>
+                        <a href="https://t.me/username" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2024 &nbsp; Все права защищены</div>
+                <a href="privacy-policy.html" class="footer-privacy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get product data from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const productName = urlParams.get('name') || 'Мороженое Semangka';
+
+        // Update product title
+        document.getElementById('productTitle').textContent = productName;
+
+        // In a real app, you would fetch product data from an API based on productId
+        // For now, we'll use the default data
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+        
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
+

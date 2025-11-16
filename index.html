@@ -16,7 +16,9 @@
             <div class="header-content">
                 <!-- Logo -->
                 <div class="logo">
-                    <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="logo-img">
+                    <a href="#hero" class="logo-link">
+                        <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="logo-img">
+                    </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -31,7 +33,8 @@
                     <a href="#hero" class="nav-link active" data-section="hero">Главная</a>
                     <a href="#about-company" class="nav-link" data-section="about-company">О компании</a>
                     <a href="#product-groups" class="nav-link" data-section="product-groups">Продукция</a>
-                    <a href="#testimonials" class legit data-section="testimonials">Отзывы</a>
+                    <a href="#testimonials" class="nav-link" data-section="testimonials">Отзывы</a>
+                    <a href="#advantages-section" class="nav-link" data-section="advantages-section">Преимущества</a>
                     <a href="#contacts" class="nav-link" data-section="contacts">Контакты</a>
                 </nav>
 
@@ -260,43 +263,43 @@
                 <img src="SVG%20icons/Shevron%20left.svg" alt="Previous" class="nav-arrow-icon">
             </button>
             <div class="product-cards-container">
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-group="ice-cream" data-title="Мороженое">
                     <img src="Images/Category%20image-%20Ice-cream.png" alt="Мороженое" class="product-card-image">
                     <p class="product-card-label">Мороженое</p>
                 </div>
@@ -660,7 +663,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-copy">© 2024 &nbsp; Все права защищены</div>
-                <a href="#" class="footer-privacy">Политика конфиденциальности</a>
+                <a href="privacy-policy.html" class="footer-privacy">Политика конфиденциальности</a>
             </div>
         </div>
     </footer>
@@ -782,6 +785,16 @@
                 currentSection = 'hero';
             }
 
+            // Keep "О компании" active when in "how-it-works" section
+            if (currentSection === 'how-it-works') {
+                currentSection = 'about-company';
+            }
+
+            // Keep "Преимущества" active when in "video-section" section
+            if (currentSection === 'video-section') {
+                currentSection = 'advantages-section';
+            }
+
             // Update active class on nav links
             navLinks.forEach(link => {
                 const linkSection = link.getAttribute('data-section');
@@ -873,6 +886,17 @@
         }
 
         updateTestimonials(0, 1);
+
+        // Product group navigation
+        const productCards = document.querySelectorAll('.product-card[data-group]');
+        productCards.forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                const group = card.getAttribute('data-group');
+                const title = card.getAttribute('data-title');
+                window.location.href = `product-group.html?group=${group}&title=${encodeURIComponent(title)}`;
+            });
+        });
     </script>
 </body>
 </html>
