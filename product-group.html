@@ -16,7 +16,7 @@
             <div class="header-content">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.html#hero" class="logo-link">
                         <img src="SVG%20icons/Logo%20SVG.svg" alt="Яниторг group" class="logo-img">
                     </a>
                 </div>
@@ -30,11 +30,12 @@
 
                 <!-- Navigation -->
                 <nav class="nav">
-                    <a href="index.html#hero" class="nav-link">Главная</a>
-                    <a href="index.html#about-company" class="nav-link">О компании</a>
-                    <a href="index.html#product-groups" class="nav-link active">Продукция</a>
-                    <a href="index.html#testimonials" class="nav-link">Отзывы</a>
-                    <a href="index.html#contacts" class="nav-link">Контакты</a>
+                    <a href="index.html#hero" class="nav-link" data-section="hero">Главная</a>
+                    <a href="index.html#about-company" class="nav-link" data-section="about-company">О компании</a>
+                    <a href="index.html#product-groups" class="nav-link active" data-section="product-groups">Продукция</a>
+                    <a href="index.html#testimonials" class="nav-link" data-section="testimonials">Отзывы</a>
+                    <a href="index.html#advantages-section" class="nav-link" data-section="advantages-section">Преимущества</a>
+                    <a href="index.html#contacts" class="nav-link" data-section="contacts">Контакты</a>
                 </nav>
 
                 <!-- Contact Container -->
@@ -60,7 +61,7 @@
             <!-- Breadcrumbs -->
             <div class="breadcrumbs">
                 <a href="index.html" class="breadcrumb-link">Главная</a>
-                <span class="breadcrumb-separator">></span>
+                <img src="SVG%20icons/Breadcrumbs%20arrow.svg" alt="" class="breadcrumb-separator">
                 <span class="breadcrumb-current">Товарные группы</span>
             </div>
 
@@ -176,63 +177,59 @@
             const paginationNumbers = document.getElementById('paginationNumbers');
             paginationNumbers.innerHTML = '';
 
-            // Always show first page
-            if (totalPages > 0) {
-                const page1 = document.createElement('button');
-                page1.className = `pagination-number ${currentPage === 1 ? 'active' : ''}`;
-                page1.textContent = '1';
-                page1.addEventListener('click', () => {
-                    currentPage = 1;
+            // Helper function to create page button
+            function createPageButton(pageNum) {
+                const btn = document.createElement('button');
+                btn.className = `pagination-number ${currentPage === pageNum ? 'active' : ''}`;
+                btn.textContent = pageNum.toString();
+                btn.addEventListener('click', () => {
+                    currentPage = pageNum;
                     renderProducts(currentPage);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
-                paginationNumbers.appendChild(page1);
+                return btn;
             }
 
-            // Show pages around current page
-            if (totalPages > 1) {
-                const page2 = document.createElement('button');
-                page2.className = `pagination-number ${currentPage === 2 ? 'active' : ''}`;
-                page2.textContent = '2';
-                page2.addEventListener('click', () => {
-                    currentPage = 2;
-                    renderProducts(currentPage);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-                paginationNumbers.appendChild(page2);
-            }
-
-            if (totalPages > 2) {
-                const page3 = document.createElement('button');
-                page3.className = `pagination-number ${currentPage === 3 ? 'active' : ''}`;
-                page3.textContent = '3';
-                page3.addEventListener('click', () => {
-                    currentPage = 3;
-                    renderProducts(currentPage);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-                paginationNumbers.appendChild(page3);
-            }
-
-            // Show ellipsis if needed (when current page is far from end)
-            if (totalPages > 3 && currentPage < totalPages - 2) {
+            // Helper function to create ellipsis
+            function createEllipsis() {
                 const ellipsis = document.createElement('span');
                 ellipsis.className = 'pagination-ellipsis';
                 ellipsis.textContent = '...';
-                paginationNumbers.appendChild(ellipsis);
+                return ellipsis;
             }
 
-            // Always show last page (page 10) if there are more than 3 pages
-            if (totalPages > 3) {
-                const lastPage = document.createElement('button');
-                lastPage.className = `pagination-number ${currentPage === totalPages ? 'active' : ''}`;
-                lastPage.textContent = totalPages.toString();
-                lastPage.addEventListener('click', () => {
-                    currentPage = totalPages;
-                    renderProducts(currentPage);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-                paginationNumbers.appendChild(lastPage);
+            if (totalPages === 0) return;
+
+            // Always show page 1
+            paginationNumbers.appendChild(createPageButton(1));
+
+            if (totalPages === 1) {
+                // Only one page, we're done
+            } else if (currentPage <= 4) {
+                // Show pages 2, 3, 4, and next page (current + 1)
+                for (let i = 2; i <= Math.min(currentPage + 1, totalPages); i++) {
+                    paginationNumbers.appendChild(createPageButton(i));
+                }
+                // Show ellipsis and last page if there are more pages
+                if (totalPages > currentPage + 1) {
+                    paginationNumbers.appendChild(createEllipsis());
+                    paginationNumbers.appendChild(createPageButton(totalPages));
+                }
+            } else {
+                // Current page is 5 or more
+                // Show ellipsis after page 1 (representing pages 2 through currentPage - 2)
+                paginationNumbers.appendChild(createEllipsis());
+                // Show current page - 1, current page, current page + 1
+                paginationNumbers.appendChild(createPageButton(currentPage - 1));
+                paginationNumbers.appendChild(createPageButton(currentPage));
+                if (currentPage + 1 <= totalPages) {
+                    paginationNumbers.appendChild(createPageButton(currentPage + 1));
+                }
+                // Show ellipsis and last page if not already shown
+                if (currentPage + 1 < totalPages) {
+                    paginationNumbers.appendChild(createEllipsis());
+                    paginationNumbers.appendChild(createPageButton(totalPages));
+                }
             }
 
             // Update arrow buttons
@@ -271,6 +268,23 @@
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenuToggle.classList.toggle('active');
                 nav.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = nav.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
             });
         }
     </script>
