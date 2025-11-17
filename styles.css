@@ -706,7 +706,7 @@ body {
 /* Hero Section */
 .hero {
     padding: clamp(100px, 13.23vw, 200px) 0 clamp(40px, 5.29vw, 80px) 0;
-    background-image: url('./Images/Main background.png');
+    background-image: url('./Images/Main-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
