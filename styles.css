@@ -1,11 +1,18 @@
 .contacts-section {
-    padding: clamp(40px, 5vw, 80px) 0;
+    padding: clamp(30px, 4vw, 80px) 0;
     background-color: #FFFFFF;
 }
 
 .contacts-section .container {
     max-width: 1512px;
-    padding: 0 clamp(20px, 5vw, 120px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
+}
+
+@media (max-width: 1519px) {
+    .contacts-section {
+        padding: clamp(30px, 3.5vw, 60px) 0;
+    }
 }
 
 .contacts-header {
@@ -34,7 +41,13 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
-    margin-left: clamp(20px, 5vw, 120px);
+    margin-left: clamp(0px, 4vw, 120px);
+}
+
+@media (max-width: 1519px) {
+    .contacts-column {
+        margin-left: clamp(0px, 3vw, 80px);
+    }
 }
 
 .contacts-info-card {
@@ -111,6 +124,9 @@
 .contact-action {
     display: inline-block;
     text-decoration: none;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    -moz-transition: -moz-transform 0.2s ease;
+    -o-transition: -o-transform 0.2s ease;
     transition: transform 0.2s ease;
 }
 
@@ -121,6 +137,10 @@
 }
 
 .contact-action:hover {
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
     transform: translateY(-2px);
 }
 
@@ -130,7 +150,13 @@
     border-radius: 32px;
     overflow: hidden;
     border: 1px solid rgba(229, 229, 229, 0.5);
-    margin-right: clamp(20px, 5vw, 120px);
+    margin-right: clamp(0px, 4vw, 120px);
+}
+
+@media (max-width: 1519px) {
+    .contacts-map {
+        margin-right: clamp(0px, 3vw, 80px);
+    }
 }
 
 .contacts-map iframe {
@@ -156,13 +182,20 @@
 /* Footer */
 .site-footer {
     background-color: #F5F5F5;
-    padding: clamp(40px, 5vw, 80px) 0;
+    padding: clamp(30px, 4vw, 80px) 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .site-footer .container {
     max-width: 1512px;
-    padding: 0 clamp(20px, 7.94vw, 120px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
+}
+
+@media (max-width: 1519px) {
+    .site-footer {
+        padding: clamp(30px, 3.5vw, 60px) 0;
+    }
 }
 
 .footer-content {
@@ -215,6 +248,9 @@
     font-size: 14px;
     color: #8F8F8F;
     text-decoration: none;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
 
@@ -238,6 +274,9 @@
     color: #8F8F8F;
     text-decoration: none;
     border-bottom: 1px solid transparent;
+    -webkit-transition: color 0.2s ease, border-color 0.2s ease;
+    -moz-transition: color 0.2s ease, border-color 0.2s ease;
+    -o-transition: color 0.2s ease, border-color 0.2s ease;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -343,10 +382,136 @@
         width: 100%;
     }
 }
+/* Browser Compatibility Reset and Normalization */
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+/* Safari-specific fixes for consistent rendering */
+@supports (-webkit-appearance: none) {
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Fix Safari flexbox gap issues */
+    .contacts-content,
+    .contacts-column,
+    .contacts-info-card,
+    .contacts-info-card .contacts-details,
+    .contacts-info-card .contact-item,
+    .contacts-info-card .contact-text,
+    .contacts-actions-card,
+    .footer-content,
+    .footer-columns,
+    .footer-column,
+    .header-content,
+    .nav,
+    .nav-link,
+    .contact-container,
+    .hero-content,
+    .hero-text,
+    .about-company-content,
+    .about-company-text,
+    .about-company-description,
+    .about-company-stats,
+    .product-cards-wrapper,
+    .product-cards-container,
+    .testimonials-content,
+    .testimonials-body,
+    .how-it-works-inner,
+    .advantages-content,
+    .video-section-content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    .product-groups-header {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    
+    /* Fix gap property for Safari - use margin instead where needed */
+    .contacts-content > * + *,
+    .contacts-column > * + *,
+    .contacts-info-card > * + *,
+    .contacts-info-card .contacts-details > * + *,
+    .contacts-info-card .contact-item > * + *,
+    .contacts-info-card .contact-text > * + *,
+    .contacts-actions-card > * + *,
+    .footer-content > * + *,
+    .footer-columns > * + *,
+    .footer-column > * + *,
+    .nav > * + *,
+    .contact-container > * + *,
+    .hero-text > * + *,
+    .about-company-text > * + *,
+    .about-company-description > * + *,
+    .about-company-stats > * + * {
+        margin-left: 0;
+    }
+    
+    /* Ensure proper flex alignment in Safari */
+    .header-content,
+    .nav,
+    .contact-container,
+    .contacts-content,
+    .footer-content {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    /* Fix Safari padding calculations */
+    .container,
+    .header .container,
+    .contacts-section .container,
+    .site-footer .container,
+    .about-company .container {
+        padding-inline: clamp(16px, 8vw, 160px);
+        padding-block: 0;
+    }
+    
+    /* Fix Safari viewport unit calculations */
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .container {
+            padding-left: max(16px, min(4vw, 120px));
+            padding-right: max(16px, min(4vw, 120px));
+        }
+    }
+}
+
+/* Ensure HTML5 elements display correctly in older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+/* Smooth scrolling for all browsers */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Fallback for browsers that don't support smooth scrolling */
+@supports not (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
@@ -360,10 +525,14 @@ body {
 .container {
     max-width: min(1512px, 100%);
     margin: 0 auto;
-    padding: 0 clamp(20px, 7.94vw, 120px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
+
+/* All container paddings use clamp(16px, 8vw, 160px) for responsive scaling */
 
 /* Scale container for larger screens */
 @media (min-width: 1920px) {
@@ -408,7 +577,8 @@ body {
 }
 
 .header .container {
-    padding: 0 clamp(20px, 7.94vw, 120px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
     height: 100%;
     max-width: min(1512px, 100%);
     margin: 0 auto;
@@ -418,14 +588,12 @@ body {
 @media (min-width: 1920px) {
     .header .container {
         max-width: min(1800px, 100%);
-        padding: 0 clamp(120px, 8vw, 200px);
     }
 }
 
 @media (min-width: 2560px) {
     .header .container {
         max-width: min(2400px, 100%);
-        padding: 0 clamp(200px, 10vw, 300px);
     }
 }
 
@@ -435,12 +603,17 @@ body {
     width: 100%;
     min-height: clamp(70px, 5.29vw, 80px);
     padding: clamp(15px, 1.32vw, 20px) 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    -webkit-transition: background-color 0.3s ease, -webkit-backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -451,6 +624,8 @@ body {
     background-color: #ffffff;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     overflow: visible;
     padding-bottom: 22px;
@@ -473,8 +648,17 @@ body {
 
 
 .header-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     height: 100%;
     position: relative;
@@ -495,6 +679,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
+    min-width: 0;
 }
 
 .contact-container {
@@ -521,7 +706,14 @@ body {
     height: 3px;
     background-color: #ffffff;
     border-radius: 3px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
     transform-origin: center;
 }
 
@@ -530,6 +722,10 @@ body {
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(8px, 8px);
+    -moz-transform: rotate(45deg) translate(8px, 8px);
+    -ms-transform: rotate(45deg) translate(8px, 8px);
+    -o-transform: rotate(45deg) translate(8px, 8px);
     transform: rotate(45deg) translate(8px, 8px);
 }
 
@@ -538,6 +734,10 @@ body {
 }
 
 .mobile-menu-toggle.active span:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(8px, -8px);
+    -moz-transform: rotate(-45deg) translate(8px, -8px);
+    -ms-transform: rotate(-45deg) translate(8px, -8px);
+    -o-transform: rotate(-45deg) translate(8px, -8px);
     transform: rotate(-45deg) translate(8px, -8px);
 }
 
@@ -558,22 +758,41 @@ body {
     width: clamp(90px, 7.5vw, 114px);
     height: clamp(48px, 4vw, 60px);
     display: block;
+    -o-object-fit: contain;
     object-fit: contain;
+    -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
+    -webkit-transition: -webkit-filter 0.3s ease, filter 0.3s ease;
+    -moz-transition: filter 0.3s ease;
+    -o-transition: filter 0.3s ease;
     transition: filter 0.3s ease;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
 .header.scrolled .logo-img {
+    -webkit-filter: none;
     filter: none;
 }
 
 /* Navigation */
 .nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     gap: clamp(15px, 1.98vw, 30px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: visible;
@@ -595,14 +814,28 @@ body {
     font-style: normal;
     line-height: 1;
     letter-spacing: 0;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -o-transition: color 0.3s ease, background-color 0.3s ease;
     transition: color 0.3s ease, background-color 0.3s ease;
     position: relative;
     padding: 0;
     white-space: nowrap;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     overflow: visible;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -703,15 +936,133 @@ body {
     flex-shrink: 0;
 }
 
+/* Tablet navbar adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .nav {
+        margin-left: clamp(20px, 3vw, 40px);
+        margin-right: clamp(20px, 3vw, 40px);
+        gap: clamp(12px, 2vw, 20px);
+    }
+    
+    .logo-img {
+        width: clamp(85px, 12vw, 100px);
+        height: clamp(45px, 6vw, 52px);
+    }
+    
+    .nav-link {
+        font-size: clamp(13px, 1.8vw, 15px);
+    }
+    
+    .contact-container {
+        width: clamp(140px, 18vw, 170px);
+        height: clamp(42px, 5.5vw, 48px);
+        padding: clamp(6px, 0.8vw, 10px) clamp(10px, 1.3vw, 14px);
+        gap: clamp(12px, 1.6vw, 18px);
+    }
+}
+
+/* Medium desktop navbar */
+@media (min-width: 1024px) and (max-width: 1519px) {
+    .nav {
+        margin-left: clamp(30px, 3.5vw, 60px);
+        margin-right: clamp(30px, 3.5vw, 60px);
+        gap: clamp(14px, 1.8vw, 24px);
+    }
+    
+    .logo-img {
+        width: clamp(95px, 7vw, 110px);
+        height: clamp(50px, 3.7vw, 58px);
+    }
+    
+    .nav-link {
+        font-size: clamp(14px, 1.2vw, 17px);
+    }
+    
+    .contact-container {
+        width: clamp(150px, 11vw, 180px);
+        height: clamp(44px, 3.2vw, 50px);
+    }
+}
+
+/* Responsive navbar for wider screens */
+@media (min-width: 1520px) {
+    .nav {
+        margin-left: clamp(60px, 4vw, 80px);
+        margin-right: clamp(60px, 4vw, 80px);
+    }
+    
+    .logo-img {
+        width: clamp(100px, 6vw, 114px);
+        height: clamp(52px, 3.5vw, 60px);
+    }
+    
+    .nav-link {
+        font-size: clamp(16px, 1vw, 18px);
+    }
+    
+    .contact-container {
+        width: clamp(160px, 10vw, 194px);
+        height: clamp(46px, 3vw, 52px);
+    }
+}
+
+@media (min-width: 1920px) {
+    .nav {
+        margin-left: clamp(80px, 4.5vw, 100px);
+        margin-right: clamp(80px, 4.5vw, 100px);
+    }
+    
+    .logo-img {
+        width: clamp(110px, 5.5vw, 130px);
+        height: clamp(58px, 3vw, 68px);
+    }
+    
+    .nav-link {
+        font-size: clamp(17px, 0.9vw, 20px);
+    }
+    
+    .contact-container {
+        width: clamp(170px, 9vw, 210px);
+        height: clamp(48px, 2.8vw, 56px);
+    }
+}
+
+@media (min-width: 2560px) {
+    .nav {
+        margin-left: clamp(100px, 4vw, 120px);
+        margin-right: clamp(100px, 4vw, 120px);
+    }
+    
+    .logo-img {
+        width: clamp(130px, 5vw, 150px);
+        height: clamp(68px, 2.7vw, 78px);
+    }
+    
+    .nav-link {
+        font-size: clamp(18px, 0.7vw, 22px);
+    }
+    
+    .contact-container {
+        width: clamp(190px, 7.5vw, 230px);
+        height: clamp(50px, 2vw, 60px);
+    }
+}
+
 /* Hero Section */
 .hero {
-    padding: clamp(100px, 13.23vw, 200px) 0 clamp(40px, 5.29vw, 80px) 0;
+    padding: clamp(80px, 10vw, 200px) 0 clamp(30px, 4vw, 80px) 0;
     background-image: url('./Images/Main-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     min-height: clamp(500px, 66vw, 600px);
+}
+
+@media (max-width: 1519px) {
+    .hero {
+        padding: clamp(70px, 8vw, 150px) 0 clamp(25px, 3vw, 60px) 0;
+    }
 }
 
 .hero-content {
@@ -737,6 +1088,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: clamp(8px, 0.66vw, 10px);
+    padding-top: clamp(40px, 4vw, 80px);
+    padding-bottom: clamp(20px, 2vw, 40px);
 }
 
 .hero-title {
@@ -788,8 +1141,17 @@ body {
 }
 
 .download-btn {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: clamp(8px, 0.66vw, 10px);
     background-color: #ffffff;
@@ -806,23 +1168,39 @@ body {
     line-height: clamp(24px, 1.98vw, 30px);
     font-weight: 600;
     font-family: 'Inter', sans-serif;
+    -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
     transform: none;
-    scale: 1;
 }
 
 .download-btn:hover {
     background-color: #ffffff;
     color: #208AF4;
+    -webkit-box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.15);
+    -moz-box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.15);
 }
 
 .download-btn:active {
     background-color: #DAE2FF;
     color: #208AF4;
+    -webkit-box-shadow: 0 0 17px 5px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0 0 17px 5px rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 17px 5px rgba(255, 255, 255, 0.2);
 }
 
@@ -830,6 +1208,7 @@ body {
     width: 24px;
     height: 24px;
     display: block;
+    -webkit-filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(2878%) hue-rotate(200deg) brightness(97%) contrast(101%);
     filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(2878%) hue-rotate(200deg) brightness(97%) contrast(101%);
 }
 
@@ -853,13 +1232,23 @@ body {
 
 /* About Company Section */
 .about-company {
-    padding: clamp(30px, 2.65vw, 40px) 0 clamp(30px, 2.65vw, 40px) 0;
+    padding: clamp(25px, 2.2vw, 40px) 0 clamp(25px, 2.2vw, 40px) 0;
     background-color: #ffffff;
 }
 
 .about-company .container {
     max-width: min(1512px, 100%);
-    padding: 0 clamp(40px, 7.94vw, 120px);
+    padding: 0 clamp(16px, 4vw, 120px);
+}
+
+@media (max-width: 1519px) {
+    .about-company {
+        padding: clamp(25px, 2vw, 35px) 0 clamp(25px, 2vw, 35px) 0;
+    }
+    
+    .about-company .container {
+        padding: 0 clamp(16px, 3.5vw, 80px);
+    }
 }
 
 @media (min-width: 1920px) {
@@ -877,7 +1266,8 @@ body {
 }
 
 .about-company-header {
-    width: clamp(320px, 49.21vw, 744px);
+    width: 100%;
+    max-width: clamp(320px, 49.21vw, 744px);
     margin: 0 auto clamp(24px, 2.38vw, 36px) auto;
     text-align: center;
 }
@@ -904,8 +1294,8 @@ body {
 
 .about-company-content {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: clamp(16px, 1.59vw, 24px);
+    grid-template-columns: minmax(clamp(250px, 29.89vw, 452px), clamp(250px, 29.89vw, 452px)) 1fr;
+    gap: clamp(16px, 1.59vw, 32px);
     align-items: stretch;
     width: 100%;
     max-width: 1512px;
@@ -913,29 +1303,27 @@ body {
 }
 
 .about-company-photo {
-    width: clamp(250px, 29.89vw, 452px);
+    width: 100%;
     flex-shrink: 0;
     display: flex;
     align-items: stretch;
-    min-height: 100%;
+    height: 100%;
 }
 
 .about-company-image {
     width: 100%;
     height: 100%;
-    aspect-ratio: 452 / 547;
     border-radius: clamp(12px, 2.12vw, 32px);
     object-fit: cover;
     display: block;
 }
 
 .about-company-text {
-    width: clamp(250px, 52.65vw, 796px);
-    max-width: 100%;
+    width: 100%;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(16px, 2.65vw, 40px);
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .about-company-description {
@@ -943,6 +1331,7 @@ body {
     flex-direction: column;
     gap: clamp(12px, 1.32vw, 20px);
     width: 100%;
+    min-width: 0;
 }
 
 .about-company-description p {
@@ -953,16 +1342,21 @@ body {
     line-height: 1.6;
     margin: 0;
     text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .about-company-stats {
     display: flex;
     flex-wrap: wrap;
     gap: clamp(16px, 4.15vw, 62.67px);
-    margin-top: clamp(8px, 1.32vw, 20px);
+    margin-top: clamp(32px, 4vw, 60px);
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1512px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .stat-card {
@@ -1029,16 +1423,9 @@ body {
 /* Large screens - scale proportionally */
 @media (min-width: 1512px) {
     .about-company-content {
+        grid-template-columns: minmax(clamp(452px, 29.89vw, 600px), clamp(452px, 29.89vw, 600px)) 1fr;
         gap: clamp(24px, 1.59vw, 32px);
         max-width: min(1512px, 100%);
-    }
-    
-    .about-company-photo {
-        width: clamp(452px, 29.89vw, 600px);
-    }
-    
-    .about-company-text {
-        width: clamp(796px, 52.65vw, 1050px);
     }
     
     .about-company-stats {
@@ -1067,35 +1454,37 @@ body {
 
 @media (min-width: 1920px) {
     .about-company-content {
+        grid-template-columns: minmax(clamp(600px, 31.25vw, 750px), clamp(600px, 31.25vw, 750px)) 1fr;
         max-width: min(1800px, 100%);
-    }
-    
-    .about-company-photo {
-        width: clamp(600px, 31.25vw, 750px);
-    }
-    
-    .about-company-text {
-        width: clamp(1050px, 54.69vw, 1300px);
     }
 }
 
 @media (min-width: 2560px) {
     .about-company-content {
+        grid-template-columns: minmax(clamp(750px, 29.3vw, 900px), clamp(750px, 29.3vw, 900px)) 1fr;
         max-width: min(2400px, 100%);
     }
-    
-    .about-company-photo {
-        width: clamp(750px, 29.3vw, 900px);
+}
+
+/* Medium desktop sizes */
+@media (min-width: 1200px) and (max-width: 1511px) {
+    .about-company-content {
+        grid-template-columns: minmax(clamp(300px, 25vw, 452px), clamp(300px, 25vw, 452px)) 1fr;
+        gap: clamp(20px, 1.5vw, 24px);
     }
-    
-    .about-company-text {
-        width: clamp(1300px, 50.78vw, 1600px);
+}
+
+@media (min-width: 968px) and (max-width: 1199px) {
+    .about-company-content {
+        grid-template-columns: minmax(clamp(280px, 30vw, 400px), clamp(280px, 30vw, 400px)) 1fr;
+        gap: clamp(18px, 2vw, 24px);
     }
 }
 
 @media (max-width: 968px) {
     .about-company-header {
-        width: clamp(280px, 80vw, 744px);
+        width: 100%;
+        max-width: clamp(280px, 80vw, 744px);
         margin-bottom: clamp(20px, 4vw, 30px);
     }
     
@@ -1142,12 +1531,21 @@ body {
 
 /* Product Groups Section */
 .product-groups {
-    padding: clamp(30px, 2.65vw, 40px) 0 clamp(30px, 2.65vw, 40px) 0;
+    padding: clamp(25px, 2.2vw, 40px) 0 clamp(25px, 2.2vw, 40px) 0;
     background-color: #ffffff;
     overflow-x: visible;
 }
 
+@media (max-width: 1519px) {
+    .product-groups {
+        padding: clamp(25px, 2vw, 35px) 0 clamp(25px, 2vw, 35px) 0;
+    }
+}
+
 .product-groups-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: clamp(24px, 2.38vw, 36px);
 }
@@ -1302,7 +1700,7 @@ body {
 /* Testimonials Section */
 .testimonials {
     background-color: #208AF4;
-    padding: 20px 0 40px;
+    padding: clamp(20px, 2vw, 40px) 0 clamp(30px, 3vw, 40px);
 }
 
 .testimonials-content {
@@ -1312,8 +1710,18 @@ body {
     width: 100%;
     max-width: 1512px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 clamp(16px, 4vw, 80px);
     box-sizing: border-box;
+}
+
+@media (max-width: 1519px) {
+    .testimonials {
+        padding: clamp(20px, 1.8vw, 35px) 0 clamp(25px, 2.5vw, 35px);
+    }
+    
+    .testimonials-content {
+        padding: 0 clamp(16px, 3.5vw, 60px);
+    }
 }
 
 .testimonials-header {
@@ -1585,9 +1993,14 @@ body {
     }
 }
 
+/* Tablet and mobile breakpoint */
 @media (max-width: 968px) {
     .container {
         padding: 0 clamp(16px, 4vw, 40px);
+    }
+    
+    .header {
+        padding: clamp(15px, 1.32vw, 20px) clamp(16px, 4vw, 40px);
     }
     
     .hero-content {
@@ -1618,21 +2031,13 @@ body {
         max-width: 611px;
         height: auto;
     }
-}
-
-@media (max-width: 968px) {
-    .header {
-        padding: clamp(15px, 1.32vw, 20px) clamp(16px, 4vw, 40px);
-    }
     
     .contact-container {
         width: clamp(130px, 20vw, 194px);
         gap: clamp(12px, 2vw, 24px);
         padding: clamp(8px, 1vw, 11px) clamp(10px, 1.5vw, 16px);
     }
-}
-
-@media (max-width: 968px) {
+    
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1655,6 +2060,8 @@ body {
         gap: 0;
         max-height: calc(100vh - 80px);
         overflow-y: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .nav.active {
@@ -1668,6 +2075,7 @@ body {
         padding: 15px 0;
         border-bottom: 1px solid #f0f0f0;
         color: #333;
+        font-size: clamp(14px, 3.5vw, 16px);
     }
     
     .nav-link:last-child {
@@ -1677,8 +2085,13 @@ body {
     .header.scrolled .nav {
         top: 80px;
     }
+    
+    .nav-link.active::after {
+        display: none;
+    }
 }
 
+/* Tablet portrait and small tablets */
 @media (max-width: 768px) {
     .container {
         padding: 0 clamp(16px, 3vw, 32px);
@@ -1704,6 +2117,11 @@ body {
 
     .nav {
         top: clamp(65px, 10vw, 80px);
+    }
+
+    .hero {
+        padding: clamp(80px, 15vw, 150px) 0 clamp(30px, 6vw, 60px) 0;
+        min-height: clamp(400px, 70vw, 550px);
     }
 
     .hero-title {
@@ -1744,8 +2162,57 @@ body {
     .mobile-menu-toggle {
         order: 3;
     }
+    
+    /* About company section responsive */
+    .about-company-header {
+        width: 100%;
+        margin-bottom: clamp(20px, 4vw, 30px);
+    }
+    
+    .about-company-title {
+        font-size: clamp(18px, 4.5vw, 24px);
+    }
+    
+    .about-company-subtitle {
+        font-size: clamp(13px, 3vw, 16px);
+    }
+    
+    /* Product groups responsive */
+    .product-groups-header {
+        margin-bottom: clamp(20px, 4vw, 30px);
+    }
+    
+    .product-groups-title {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+    
+    /* Contacts section responsive */
+    .contacts-content {
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(20px, 4vw, 30px);
+    }
+    
+    .contacts-column,
+    .contacts-map {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .contacts-info-card,
+    .contacts-actions-card {
+        width: 100%;
+        max-width: 627px;
+    }
+    
+    .contacts-map {
+        height: clamp(250px, 50vw, 400px);
+    }
 }
 
+/* Mobile devices */
 @media (max-width: 480px) {
     .container {
         padding: 0 clamp(12px, 2.5vw, 20px);
@@ -1764,6 +2231,17 @@ body {
     .header-content {
         gap: 10px;
     }
+    
+    .header.scrolled .nav,
+    .nav {
+        top: 60px;
+        max-height: calc(100vh - 60px);
+    }
+
+    .hero {
+        padding: clamp(70px, 18vw, 120px) 0 clamp(25px, 6vw, 50px) 0;
+        min-height: clamp(350px, 80vw, 500px);
+    }
 
     .hero-title {
         font-size: clamp(24px, 6vw, 32px);
@@ -1780,6 +2258,7 @@ body {
         height: clamp(50px, 12vw, 56px);
         width: 100%;
         max-width: 100%;
+        padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 24px);
     }
     
     .logo-img {
@@ -1788,8 +2267,8 @@ body {
     }
     
     .nav-link {
-        font-size: clamp(12px, 3vw, 13px);
-        padding: 4px 0;
+        font-size: clamp(14px, 3.5vw, 16px);
+        padding: 12px 0;
     }
     
     .contact-container {
@@ -1806,53 +2285,84 @@ body {
     }
     
     .nav {
-        gap: 12px;
+        gap: 0;
+        padding: 15px;
     }
     
+    /* About company mobile */
+    .about-company {
+        padding: clamp(25px, 6vw, 40px) 0;
+    }
+    
+    .about-company-header {
+        margin-bottom: clamp(18px, 4vw, 24px);
+    }
+    
+    .about-company-title {
+        font-size: clamp(18px, 4.5vw, 22px);
+        margin-bottom: clamp(4px, 1vw, 6px);
+    }
+    
+    .about-company-subtitle {
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    
+    .about-company-description p {
+        font-size: clamp(13px, 3.2vw, 15px);
+        line-height: 1.5;
+    }
+    
+    .about-company-stats {
+        flex-direction: column;
+        gap: clamp(12px, 3vw, 16px);
+    }
+    
+    .stat-card {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        min-height: 140px;
+    }
+    
+    /* Product groups mobile */
     .product-groups {
-        padding: clamp(40px, 10vw, 60px) 0;
+        padding: clamp(30px, 7.5vw, 50px) 0;
     }
     
     .product-groups-header {
-        margin-bottom: clamp(30px, 7.5vw, 40px);
+        margin-bottom: clamp(20px, 5vw, 30px);
+    }
+    
+    .product-groups-title {
+        font-size: clamp(20px, 5vw, 26px);
+        margin-bottom: clamp(10px, 2.5vw, 14px);
+    }
+    
+    .product-groups-description {
+        font-size: clamp(13px, 3.2vw, 15px);
+        line-height: clamp(18px, 4.5vw, 22px);
     }
     
     .product-cards-wrapper {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
     
     .product-cards-container {
         width: 100%;
         overflow-x: auto;
         padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .product-card {
-        width: clamp(180px, 45vw, 300px);
-    }
-    
-    .product-nav-arrow {
-        align-self: flex-end;
-    }
-    
-    .product-groups-title {
-        font-size: clamp(24px, 6vw, 32px);
-        margin-bottom: clamp(15px, 3.75vw, 20px);
-    }
-    
-    .product-groups-description {
-        font-size: clamp(14px, 3.5vw, 16px);
-        line-height: clamp(20px, 5vw, 24px);
-    }
-    
-    .product-card {
         width: clamp(160px, 40vw, 250px);
         padding: clamp(15px, 3.75vw, 25px);
+        flex-shrink: 0;
     }
     
     .product-card-label {
-        font-size: clamp(14px, 3.5vw, 16px);
+        font-size: clamp(13px, 3.2vw, 15px);
     }
     
     .product-nav-arrow {
@@ -1868,26 +2378,31 @@ body {
 
 /* How It Works Section */
 .how-it-works {
-    padding: clamp(15px, 1.32vw, 20px) 0 clamp(30px, 2.65vw, 40px) 0;
+    padding: clamp(15px, 1.2vw, 20px) 0 clamp(25px, 2.2vw, 40px) 0;
     background-color: #208AF4;
 }
 
 .how-it-works .container {
     max-width: min(1512px, 100%);
-    padding: 0 clamp(40px, 3.97vw, 60px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
+}
+
+@media (max-width: 1519px) {
+    .how-it-works {
+        padding: clamp(15px, 1vw, 18px) 0 clamp(25px, 2vw, 35px) 0;
+    }
 }
 
 @media (min-width: 1920px) {
     .how-it-works .container {
         max-width: min(1800px, 100%);
-        padding: 0 clamp(60px, 4vw, 100px);
     }
 }
 
 @media (min-width: 2560px) {
     .how-it-works .container {
         max-width: min(2400px, 100%);
-        padding: 0 clamp(100px, 5vw, 150px);
     }
 }
 
@@ -2069,26 +2584,31 @@ body {
 
 /* Video Section */
 .video-section {
-    padding: clamp(15px, 1.32vw, 20px) 0 clamp(30px, 2.65vw, 40px) 0;
+    padding: clamp(15px, 1.2vw, 20px) 0 clamp(25px, 2.2vw, 40px) 0;
     background-color: #208AF4;
 }
 
 .video-section .container {
     max-width: min(1512px, 100%);
-    padding: 0 clamp(80px, 7.94vw, 120px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
+}
+
+@media (max-width: 1519px) {
+    .video-section {
+        padding: clamp(15px, 1vw, 18px) 0 clamp(25px, 2vw, 35px) 0;
+    }
 }
 
 @media (min-width: 1920px) {
     .video-section .container {
         max-width: min(1800px, 100%);
-        padding: 0 clamp(120px, 8vw, 200px);
     }
 }
 
 @media (min-width: 2560px) {
     .video-section .container {
         max-width: min(2400px, 100%);
-        padding: 0 clamp(200px, 10vw, 300px);
     }
 }
 
@@ -2226,26 +2746,31 @@ body {
 
 /* Advantages Section */
 .advantages-section {
-    padding: clamp(15px, 1.32vw, 20px) 0 clamp(30px, 2.65vw, 40px) 0;
+    padding: clamp(15px, 1.2vw, 20px) 0 clamp(25px, 2.2vw, 40px) 0;
     background-color: #FFFFFF;
 }
 
 .advantages-section .container {
     max-width: min(1512px, 100%);
-    padding: 0 clamp(40px, 7.94vw, 120px);
+    padding-inline: clamp(16px, 8vw, 160px);
+    padding-block: 0;
+}
+
+@media (max-width: 1519px) {
+    .advantages-section {
+        padding: clamp(15px, 1vw, 18px) 0 clamp(25px, 2vw, 35px) 0;
+    }
 }
 
 @media (min-width: 1920px) {
     .advantages-section .container {
         max-width: min(1800px, 100%);
-        padding: 0 clamp(120px, 8vw, 200px);
     }
 }
 
 @media (min-width: 2560px) {
     .advantages-section .container {
         max-width: min(2400px, 100%);
-        padding: 0 clamp(200px, 10vw, 300px);
     }
 }
 
@@ -2656,6 +3181,90 @@ body {
     padding: 0 4px;
 }
 
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 6px;
+        margin-top: clamp(30px, 6vw, 50px);
+        flex-wrap: wrap;
+    }
+    
+    .pagination-arrow,
+    .pagination-number {
+        min-width: 36px;
+        height: 36px;
+        font-size: clamp(14px, 3.5vw, 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 4px;
+    }
+    
+    .pagination-arrow,
+    .pagination-number {
+        min-width: 32px;
+        height: 32px;
+        font-size: clamp(12px, 3vw, 14px);
+    }
+    
+    .pagination-numbers {
+        gap: 4px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link,
+    .contact-icon,
+    .download-btn,
+    .pagination-arrow,
+    .pagination-number,
+    .product-nav-arrow,
+    .testimonial-nav {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .mobile-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* Ensure proper scaling for all viewport sizes */
+@media (min-width: 320px) and (max-width: 767px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .container {
+        overflow-x: hidden;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 968px) and (orientation: landscape) {
+    .hero {
+        min-height: clamp(300px, 50vh, 400px);
+        padding: clamp(60px, 10vh, 100px) 0 clamp(20px, 4vh, 40px) 0;
+    }
+    
+    .header {
+        min-height: 60px;
+    }
+    
+    .nav {
+        max-height: calc(100vh - 60px);
+    }
+}
+
 /* Product Detail Page */
 .product-detail {
     padding: clamp(120px, 10vw, 160px) 0 clamp(80px, 8vw, 120px);
@@ -2791,4 +3400,292 @@ body {
         flex-wrap: wrap;
     }
 }
+
+/* ============================================
+   BROWSER COMPATIBILITY & FALLBACKS
+   ============================================ */
+
+/* Flexbox fallbacks for older browsers */
+@supports not (display: flex) {
+    .header-content,
+    .nav,
+    .nav-link,
+    .contact-container,
+    .hero-content,
+    .hero-text,
+    .footer-content,
+    .footer-columns,
+    .contacts-content,
+    .contacts-column {
+        display: block;
+    }
+}
+
+/* Grid fallbacks for older browsers */
+@supports not (display: grid) {
+    .hero-content,
+    .about-company-content,
+    .product-detail-content,
+    .testimonials-body {
+        display: block;
+    }
+}
+
+/* Clamp() fallback for older browsers */
+@supports not (font-size: clamp(1rem, 2vw, 3rem)) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    @media (min-width: 768px) {
+        .container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .container {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    
+    @media (min-width: 1520px) {
+        .container {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+}
+
+/* Object-fit fallback for older browsers */
+@supports not (object-fit: contain) {
+    .logo-img,
+    .about-company-image,
+    .product-detail-image {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/* Backdrop-filter fallback */
+@supports not (backdrop-filter: blur(10px)) {
+    .header.scrolled {
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+}
+
+/* Smooth scroll fallback */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+        -webkit-transition-duration: 0.01ms !important;
+        -moz-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Internet Explorer 11 specific fixes */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .header-content,
+    .nav,
+    .hero-content {
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    .container {
+        max-width: 1512px;
+    }
+    
+    .nav-link {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+}
+
+/* Safari specific fixes - Safe compatibility fixes only */
+@supports (-webkit-appearance: none) {
+    .nav-link,
+    .contact-container,
+    .download-btn,
+    .mobile-menu-toggle,
+    button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    /* Fix Safari grid gap issues - only add webkit prefix, don't override */
+    .hero-content,
+    .about-company-content,
+    .product-detail-content,
+    .testimonials-body {
+        -webkit-grid-gap: clamp(30px, 3.97vw, 60px);
+    }
+    
+    /* Fix Safari transform and positioning */
+    .contact-action:hover {
+        -webkit-transform: translateY(-2px) translateZ(0);
+        transform: translateY(-2px) translateZ(0);
+    }
+    
+    /* Ensure proper Safari rendering with hardware acceleration */
+    .header,
+    .hero,
+    .about-company,
+    .product-groups,
+    .contacts-section,
+    .site-footer {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    /* Fix Safari flexbox rendering */
+    .header-content,
+    .nav,
+    .contact-container,
+    .contacts-content,
+    .footer-content {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    .header-content,
+    .contacts-content,
+    .footer-content {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+}
+
+/* Firefox specific fixes */
+@-moz-document url-prefix() {
+    .nav-link.active::after {
+        display: block;
+    }
+    
+    .mobile-menu-toggle span {
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+}
+
+/* Ensure proper rendering in all browsers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* Prevent text size adjustment on iOS */
+@media screen and (max-width: 767px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+}
+
+/* Fix for Chrome/Safari font rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Ensure proper touch action on mobile */
+a, button, .nav-link, .contact-icon, .download-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Fix for sticky positioning in older browsers */
+@supports not (position: sticky) {
+    .header {
+        position: relative;
+    }
+}
+
+/* Opera and Yandex Browser (Chromium-based) fixes */
+@supports (display: grid) {
+    /* Ensure grid works consistently */
+    .hero-content,
+    .about-company-content,
+    .product-detail-content,
+    .testimonials-body {
+        display: -ms-grid;
+        display: grid;
+    }
+}
+
+/* Cross-browser gap property fallback */
+@supports not (gap: 1px) {
+    /* Fallback for browsers that don't support gap */
+    .contacts-content > * + *,
+    .contacts-column > * + *,
+    .contacts-info-card > * + *,
+    .contacts-info-card .contacts-details > * + *,
+    .contacts-info-card .contact-item > * + *,
+    .contacts-info-card .contact-text > * + *,
+    .contacts-actions-card > * + *,
+    .footer-content > * + *,
+    .footer-columns > * + *,
+    .footer-column > * + *,
+    .nav > * + *,
+    .contact-container > * + *,
+    .hero-text > * + *,
+    .about-company-text > * + *,
+    .about-company-description > * + *,
+    .about-company-stats > * + * {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+/* Ensure consistent padding calculations across all browsers */
+.container,
+.header .container,
+.contacts-section .container,
+.site-footer .container,
+.about-company .container,
+.how-it-works .container,
+.video-section .container,
+.advantages-section .container {
+    padding-left: clamp(16px, 4vw, 120px);
+    padding-right: clamp(16px, 4vw, 120px);
+}
+
+@media (max-width: 1519px) {
+    .container,
+    .header .container,
+    .contacts-section .container,
+    .site-footer .container,
+    .about-company .container,
+    .how-it-works .container,
+    .video-section .container,
+    .advantages-section .container {
+        padding-left: clamp(16px, 3.5vw, 80px);
+        padding-right: clamp(16px, 3.5vw, 80px);
+    }
+}
+
+/* Note: All flexbox, grid, and alignment properties are defined in their respective classes above */
+/* Vendor prefixes are added inline where needed */
+/* This section removed to prevent style conflicts */
 
